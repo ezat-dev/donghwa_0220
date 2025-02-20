@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="recipe">
+	
+	<select id="getRecipeList" resultType="recipe">
+		SELECT *
+		FROM v_recipe
+	</select>
+
+	<select id="getRecipeDataList" parameterType="recipe" resultType="recipe">
+		SELECT *
+		FROM v_recipe_data
+		WHERE 1=1
+		AND r_idx = ${r_idx}
+		AND r_data_idx = ${r_data_idx}
+		ORDER BY r_idx, r_data_idx, segment
+	</select>
+	
+	<insert id="recipeDataWrite" parameterType="recipe" statementType="CALLABLE">
+		{CALL sp_recipe_set(
+			#{r_f_idx}, #{r_f_data_idx}, #{segment}, #{process_step},
+			#{time}, #{temper}, #{temper_tolerance_cont}, #{temper_tolerance_hold},
+			#{holdback_timeout_heating}, #{pressure_set_value},
+			#{pressing_capacity_f1}, #{pressing_capacity_f2},
+			#{forece_tolerance}, #{position_abs},
+			#{position_relative}, #{distance_tolerance},
+			#{holding_time1}, #{holding_time2},
+			#{number_of_loops}, #{speed_of_plunger},
+			#{gradient_of_force}, #{fastcooling},
+			#{gas_n2}, #{gas_ar},
+			#{spare}, #{hydraulic_unit_off},
+			#{press_capacity_control}, #{press_position_control},
+			#{press_distance_control}, #{r_name}, #{r_comment}
+		)}
+	</insert>	
+	
+	<insert id="recipeNew" statementType="CALLABLE">
+		{CALL sp_recipe_create_set()}
+	</insert>
+	
+	<insert id="recipeCopy" parameterType="recipe" statementType="CALLABLE">
+		{CALL sp_recipe_copy_set(${r_idx}, ${r_data_idx})}
+	</insert>
+	
+	<update id="recipeDelete" parameterType="recipe" statementType="CALLABLE">
+		{CALL sp_recipe_delete_set(${r_idx}, ${r_data_idx})}
+	</update>
+	
+	<select id="recipeCheck" parameterType="recipe" resultType="int">
+		SELECT COUNT(*) AS ccnt
+		FROM tb_recipe
+		WHERE 1=1
+		AND r_idx = ${r_idx}
+		AND r_data_idx = ${r_data_idx}
+	</select>
+	
+	<select id="graphicalProcessTrend" resultType="recipe" parameterType="recipe">
+		SELECT *
+		FROM tb_recipe_data
+		WHERE 1=1
+		AND r_f_idx = ${r_f_idx}
+		AND r_f_data_idx = ${r_f_data_idx}
+		AND process_step != 0
+	</select>	
+	
+</mapper>

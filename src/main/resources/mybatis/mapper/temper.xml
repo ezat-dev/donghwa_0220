@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="temper">
+	
+	<select id="historyTrendPenGroupSelect" resultType="string">
+		SELECT pen_group_name
+		FROM tb_temp_pen
+		GROUP BY pen_group_name
+	</select>
+	
+	<select id="historyTrendPenGroupList" resultType="temper" parameterType="temper">
+		SELECT pen_info_name, pen_group_name, pen_name, pen_color,
+		CASE WHEN pen_group_name IS NULL THEN 'N' ELSE 'Y' END AS pen_info_yn
+		FROM tb_temp_pen_info AS pen_info
+		LEFT OUTER JOIN
+			(
+				SELECT *
+			 	FROM tb_temp_pen
+			 	WHERE pen_group_name = #{pen_group_name}
+			)AS pen
+		ON pen_info.pen_info_name = pen.pen_name
+		ORDER BY idx
+	</select>
+	
+	<select id="historyTrendPenGroupChart" resultType="temper" parameterType="temper">
+		SELECT *
+		FROM (
+			SELECT tdate AS tdate2, UNIX_TIMESTAMP(tdate) AS tdate,
+					c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,cs1
+			FROM tb_temp
+		) AS aa
+		WHERE 1=1
+		AND tdate2 <![CDATA[>=]]> #{sdateTime}
+		AND tdate2 <![CDATA[<=]]> #{edateTime}
+	</select>
+
+	<select id="historyTrendPenGroupChartGroupName" parameterType="temper" resultType="string">
+		SELECT GROUP_CONCAT(pen_name)
+		FROM tb_temp_pen
+		WHERE 1=1
+		<if test="pen_group_name != 'ALL'">
+			AND pen_group_name = #{pen_group_name}
+		</if>
+	</select>
+
+	<insert id="penGroupPenAdd" parameterType="temper">
+		CALL sp_insert_pendata(#{pen_group_name},#{pen_name},#{pen_color})
+	</insert>
+	
+	<select id="getPenGroupPenCount" parameterType="temper" resultType="int">
+		SELECT COUNT(*) AS ccc
+		FROM tb_temp_pen
+		WHERE 1=1
+		AND pen_group_name = #{pen_group_name}
+		AND pen_name = #{pen_name}
+	</select>
+
+	
+</mapper>

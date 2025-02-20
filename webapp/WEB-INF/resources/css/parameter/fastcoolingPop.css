@@ -1,0 +1,203 @@
+.group-2,
+.group-2 * {
+  box-sizing: border-box;
+}
+.group-2 {
+  height: 879px;
+  position: relative;
+}
+.group-1 {
+  width: 1918px;
+  height: 878px;
+  position: static;
+}
+.header {
+  background: #123478;
+  width: 1918px;
+  height: 46.68px;
+  position: absolute;
+  left: 0px;
+  top: 1px;
+}
+.footer {
+  background: #123478;
+  width: 1918px;
+  height: 72.43px;
+  position: absolute;
+  left: 0px;
+  top: 806.57px;
+}
+.main {
+  background: #ffffff;
+  width: 1918px;
+  height: 758.89px;
+  position: absolute;
+  left: 0px;
+  top: 47.68px;
+}
+.hamburger-icon-svg-1 {
+  width: 52px;
+  height: 34px;
+  position: absolute;
+  left: 20px;
+  top: 48px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+  object-fit: cover;
+}
+.fastcooling-box {
+  background: #d9d9d9;
+  width: 666px;
+  height: 426px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.fastcooling-header {
+  background: #282828;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 666px;
+  height: 37px;
+  position: absolute;
+  left: 0px;
+  top: 1px;
+}
+.close {
+  width: 26px;
+  height: 20px;
+  position: absolute;
+  left: 631px;
+  top: 9px;
+  object-fit: cover;
+}
+.fastcooling {
+  color: #ffffff;
+  text-align: left;
+  
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 8px;
+  top: 0px;
+  width: 378px;
+  height: 29px;
+  
+}
+.act-val-box-1 {
+  background: #ffffff;
+  width: 261px;
+  height: 42px;
+  position: absolute;
+  left: 95px;
+  top: 86px;
+}
+.actual-value {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 103px;
+  top: 95px;
+  width: 128px;
+  height: 22px;
+}
+.act-val-val-1 {
+  background: #ffffff;
+  width: 200px;
+  height: 42px;
+  position: absolute;
+  left: 366px;
+  top: 86px;
+}
+.con-box-1 {
+  background: #ffffff;
+  width: 261px;
+  height: 41px;
+  position: absolute;
+  left: 95px;
+  top: 136px;
+}
+.controller-output-limit {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 103px;
+  top: 145px;
+  width: 225px;
+  height: 22px;
+}
+.con-val-1 {
+  background: #ffffff;
+  width: 200px;
+  height: 41px;
+  position: absolute;
+  left: 366px;
+  top: 136px;
+}
+.button-1 {
+  background: #c5c5c5;
+  width: 471px;
+  height: 42px;
+  position: absolute;
+  left: 95px;
+  top: 222px;
+}
+.setpoints-and-actual-values {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 172px;
+  top: 231px;
+  width: 315px;
+  height: 22px;
+}
+.button-2 {
+  background: #c5c5c5;
+  width: 471px;
+  height: 42px;
+  position: absolute;
+  left: 95px;
+  top: 278px;
+}
+.parameter {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 275px;
+  top: 287px;
+  width: 121px;
+  height: 23px;
+}
+.button-3 {
+  background: #c5c5c5;
+  width: 471px;
+  height: 41px;
+  position: absolute;
+  left: 95px;
+  top: 335px;
+}
+.prozess-values {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 245px;
+  top: 344px;
+  width: 171px;
+  height: 22px;
+}

@@ -1,0 +1,543 @@
+.group-4,
+.group-4 * {
+  box-sizing: border-box;
+}
+.group-4 {
+  height: 881px;
+  position: relative;
+}
+.group-3 {
+  width: 1918px;
+  height: 878px;
+  position: static;
+}
+.header {
+  background: #123478;
+  width: 1918px;
+  height: 46.68px;
+  position: absolute;
+  left: 0px;
+  top: 3px;
+}
+.footer {
+  background: #123478;
+  width: 1918px;
+  height: 72.43px;
+  position: absolute;
+  left: 0px;
+  top: 808.57px;
+}
+.group-2 {
+  width: 1918px;
+  height: 758.89px;
+  position: static;
+}
+.main {
+  background: #ffffff;
+  width: 1918px;
+  height: 758.89px;
+  position: absolute;
+  left: 0px;
+  top: 46.68px;
+}
+.hamburger-icon-svg-1 {
+  width: 33px;
+  height: 26.56px;
+  position: absolute;
+  left: 13px;
+  top: 36.21px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+  object-fit: cover;
+}
+.manual-operation-box {
+  background: #d9d9d9;
+  width: 385px;
+  height: 766px;
+  position: absolute;
+  left: 0px;
+  top: 3px;
+}
+.manual-operation-header {
+  background: #282828;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 385px;
+  height: 28px;
+  position: absolute;
+  left: 0px;
+  top: 3px;
+}
+.manual-operation-main {
+  background: #e6e6e6;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 385px;
+  height: 739px;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+}
+.close {
+  width: 17px;
+  height: 15px;
+  position: absolute;
+  left: 359px;
+  top: 9px;
+  object-fit: cover;
+}
+.manual-operation {
+  color: #ffffff;
+  text-align: left;
+
+  font-size: 27px;
+  font-weight: 700;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  
+}
+.auto {
+  background: #c5c5c5;
+  width: 160px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 55px;
+}
+.plc-auto {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 179px;
+  top: 57px;
+}
+.auto2 {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 59px;
+}
+.manual {
+  background: #c5c5c5;
+  width: 160px;
+  height: 32px;
+  position: absolute;
+  left: 200px;
+  top: 55px;
+}
+.plc-manual {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 57px;
+}
+.manual2 {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 206px;
+  top: 59px;
+}
+.pumping {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 97px;
+}
+.plc-pumping {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 99px;
+}
+.pumping-station {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 102px;
+}
+.high-vacuum-pump {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 141px;
+}
+.plc-high-vacuum {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 143px;
+}
+.high-vacuum-pump2 {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 146px;
+}
+.evacuate-fine {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 184px;
+}
+.plc-evacuate-fine {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 186px;
+}
+.evacuate-fine-vaccum {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 189px;
+}
+.evacuate-high {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 227px;
+}
+.plc-evacuate-high {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 229px;
+}
+.evacuate-high-vaccum {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 232px;
+}
+.fur-pre-control {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 270px;
+}
+.plc-fur-control {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 272px;
+}
+.furnace-pressure-control {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 275px;
+}
+.fur-hit {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 314px;
+}
+.plc-fur-hit {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 316px;
+}
+.furnace-heating {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 319px;
+}
+.n-2 {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 357px;
+}
+.plc-n-2 {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 359px;
+}
+.n-2-inlet {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 362px;
+}
+.ar {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 400px;
+}
+.plc-ar {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 402px;
+}
+.ar-inlet {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 405px;
+}
+.venting {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 443px;
+}
+.plc-venting {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 445px;
+}
+.venting2 {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 448px;
+}
+.venting-n-2 {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 486px;
+}
+.plc-venting-n-2 {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 488px;
+}
+.venting-n-22 {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 491px;
+}
+.venting-ar {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 530px;
+}
+.plc-venting-ar {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 532px;
+}
+.venting-ar2 {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 535px;
+}
+.fastcooling {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 573px;
+}
+.plc-fastcooling {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 575px;
+}
+.fastcooling2 {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 578px;
+}
+.manual-leaktest {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 616px;
+}
+.plc-leak {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 618px;
+}
+.manual-leaktest2 {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 621px;
+}
+.open-lid {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 672px;
+}
+.plc-open-lid {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 674px;
+}
+.open-lid-clamps {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 677px;
+}
+.close-lid {
+  background: #c5c5c5;
+  width: 333px;
+  height: 32px;
+  position: absolute;
+  left: 27px;
+  top: 715px;
+}
+.plc-close-lid {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 717px;
+}
+.close-lid-clamps {
+  color: #000000;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 33px;
+  top: 720px;
+}

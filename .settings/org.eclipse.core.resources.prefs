@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/test/java=UTF-8
+encoding//webapp/WEB-INF/views/analysis/historyTrend.jsp=UTF-8
+encoding//webapp/WEB-INF/views/furnace/automaticProgramPop1.jsp=UTF-8
+encoding//webapp/WEB-INF/views/furnace/automaticProgramPop2.jsp=UTF-8
+encoding//webapp/WEB-INF/views/furnace/automaticProgramPop3.jsp=UTF-8
+encoding//webapp/WEB-INF/views/furnace/automaticProgramPop4.jsp=UTF-8
+encoding//webapp/WEB-INF/views/furnace/operationPressPop.jsp=UTF-8
+encoding//webapp/WEB-INF/views/furnace/overview.jsp=UTF-8
+encoding//webapp/WEB-INF/views/furnace/recipeData.jsp=UTF-8
+encoding//webapp/WEB-INF/views/include/login.jsp=UTF-8
+encoding//webapp/WEB-INF/views/include/mainFooter.jsp=UTF-8
+encoding//webapp/WEB-INF/views/include/mainHeader.jsp=UTF-8
+encoding//webapp/WEB-INF/views/process/heaterPop.jsp=UTF-8
+encoding//webapp/WEB-INF/views/process/pressureSwitchesPop.jsp=UTF-8

@@ -1,0 +1,300 @@
+.group-2,
+.group-2 * {
+  box-sizing: border-box;
+}
+.group-2 {
+  height: 882px;
+  position: relative;
+}
+.group-1 {
+  width: 1918px;
+  height: 878px;
+  position: static;
+}
+.header {
+  background: #123478;
+  width: 1918px;
+  height: 46.68px;
+  position: absolute;
+  left: 0px;
+  top: 4px;
+}
+.footer {
+  background: #123478;
+  width: 1918px;
+  height: 72.43px;
+  position: absolute;
+  left: 0px;
+  top: 809.57px;
+}
+.main {
+  background: #ffffff;
+  width: 1918px;
+  height: 758.89px;
+  position: absolute;
+  left: 0px;
+  top: 50.68px;
+}
+.hamburger-icon-svg-1 {
+  width: 33px;
+  height: 26.56px;
+  position: absolute;
+  left: 13px;
+  top: 40.21px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+  object-fit: cover;
+}
+.auto-pro-box {
+  background: #d9d9d9;
+  width: 633px;
+  height: 478px;
+  position: absolute;
+  left: 0px;
+  top: 8px;
+}
+.auto-pro-header {
+  background: #282828;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 633px;
+  height: 28px;
+  position: absolute;
+  left: 0px;
+  top: 4px;
+}
+.auto-pro-main {
+  background: #e6e6e6;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 633px;
+  height: 455px;
+  position: absolute;
+  left: 0px;
+  top: 31px;
+}
+.automatic-program {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  
+}
+.close {
+  width: 17px;
+  height: 15px;
+  position: absolute;
+  left: 610px;
+  top: 11px;
+  object-fit: cover;
+}
+.automatic {
+  background: #c5c5c5;
+  width: 158px;
+  height: 30px;
+  position: absolute;
+  left: 1px;
+  top: 32px;
+}
+.automatic-text {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 37px;
+  top: 35px;
+}
+.programmer {
+  background: #c5c5c5;
+  width: 158px;
+  height: 30px;
+  position: absolute;
+  left: 159px;
+  top: 32px;
+}
+.programmer-text {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 185px;
+  top: 35px;
+}
+.start-conditions {
+  background: #c5c5c5;
+  width: 157px;
+  height: 30px;
+  position: absolute;
+  left: 317px;
+  top: 32px;
+}
+.startconditions-text {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 330px;
+  top: 35px;
+}
+.batch-data {
+  background: #c5c5c5;
+  width: 158px;
+  height: 30px;
+  position: absolute;
+  left: 474px;
+  top: 32px;
+}
+.batch-data-text {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 506px;
+  top: 35px;
+}
+.jump {
+  background: #c5c5c5;
+  width: 345px;
+  height: 31px;
+  position: absolute;
+  left: 21px;
+  top: 154px;
+}
+.jump2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 26px;
+  top: 156px;
+}
+.jump-val {
+  background: #ffffff;
+  width: 239px;
+  height: 31px;
+  position: absolute;
+  left: 373px;
+  top: 154px;
+}
+.setpoint {
+  background: #c5c5c5;
+  width: 345px;
+  height: 30px;
+  position: absolute;
+  left: 21px;
+  top: 267px;
+}
+.use-actual-value-as-setpoint {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 27px;
+  top: 269px;
+}
+.ram-sav {
+  background: #ffffff;
+  width: 345px;
+  height: 30px;
+  position: absolute;
+  left: 21px;
+  top: 305px;
+}
+.ramprate-sav {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 26px;
+  top: 307px;
+}
+.ram-sav-val {
+  background: #ffffff;
+  width: 239px;
+  height: 30px;
+  position: absolute;
+  left: 374px;
+  top: 305px;
+}
+.end-sav {
+  background: #ffffff;
+  width: 345px;
+  height: 30px;
+  position: absolute;
+  left: 21px;
+  top: 366px;
+}
+.end-setpoint-sav {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 26px;
+  top: 368px;
+}
+.end-sav-val {
+  background: #ffffff;
+  width: 239px;
+  height: 30px;
+  position: absolute;
+  left: 374px;
+  top: 366px;
+}
+.pro-step {
+  background: #ffffff;
+  width: 345px;
+  height: 30px;
+  position: absolute;
+  left: 21px;
+  top: 427px;
+}
+.programmed-procedure-step {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 26px;
+  top: 429px;
+}
+.heating-vacuum {
+  background: #c5c5c5;
+  width: 239px;
+  height: 30px;
+  position: absolute;
+  left: 374px;
+  top: 427px;
+}
+.heating-vacuum2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 420px;
+  top: 430px;
+}
