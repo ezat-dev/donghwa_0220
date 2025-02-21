@@ -196,91 +196,83 @@
 
 
 
-  <script>
-  var popup;
-  
-  function modalClick(location){
-      const modal = document.querySelector('.'+location);
-      modal.style.display="";
+ <script>
+  var popups = [];
+
+  function modalClick(location) {
+      document.querySelector('.' + location).style.display = "";
   }
-  
-  
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const menu = document.getElementById('hamburgerMenu');
 
-    hamburgerIcon.addEventListener('click', () => {
+  const hamburgerIcon = document.querySelector('.hamburger-icon');
+  const menu = document.getElementById('hamburgerMenu');
+
+  hamburgerIcon.addEventListener('click', () => {
       menu.classList.toggle('active');
-    });
+  });
 
-    const menuItems = document.querySelectorAll('.menu > ul > li');
+  const menuItems = document.querySelectorAll('.menu > ul > li');
 
-    menuItems.forEach(item => {
+  menuItems.forEach(item => {
       item.addEventListener('click', (event) => {
-        menuItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            const submenu = otherItem.querySelector('.submenu');
-            if (submenu) {
-              submenu.classList.remove('active');
-              submenu.style.maxHeight = null;
-            }
-          }
-        });
+          menuItems.forEach(otherItem => {
+              if (otherItem !== item) {
+                  const submenu = otherItem.querySelector('.submenu');
+                  if (submenu) {
+                      submenu.classList.remove('active');
+                      submenu.style.maxHeight = null;
+                  }
+              }
+          });
 
-        const submenu = item.querySelector('.submenu');
-        if (submenu) {
-          submenu.classList.toggle('active');
-          if (submenu.classList.contains('active')) {
-            submenu.style.maxHeight = submenu.scrollHeight + "px";
-          } else {
-            submenu.style.maxHeight = null;
+          const submenu = item.querySelector('.submenu');
+          if (submenu) {
+              submenu.classList.toggle('active');
+              submenu.style.maxHeight = submenu.classList.contains('active') ? submenu.scrollHeight + "px" : null;
           }
-        }
 
-        event.stopPropagation();
+          event.stopPropagation();
       });
-    });
+  });
 
-    const historyTrendsItem = document.getElementById('historytrends');
-    if (historyTrendsItem) {
+  const historyTrendsItem = document.getElementById('historytrends');
+  if (historyTrendsItem) {
       historyTrendsItem.addEventListener('click', () => {
-        window.location.href = 'RecipeTrend';
+          window.location.href = 'RecipeTrend';
       });
-    }
+  }
 
-    function menuClick(url) {
-        if (popup && !popup.closed) {
-            popup.close();
-        }
-        location.href = url;
-    }
+  function menuClick(url) {
+      location.href = url;
+  }
 
-    function popupClick(url, popupWidth, popupHeight, customLeft, customTop) {
-        // 브라우저 창 크기 가져오기
-        var browserWidth = window.innerWidth; // 브라우저 가로 크기
-        var browserHeight = window.innerHeight; // 브라우저 세로 크기
+  function popupClick(url, popupWidth, popupHeight, customLeft, customTop) {
+      var popup = window.open(
+          url,
+          "popupWindow" + popups.length,
+          "width=" + popupWidth + 
+          ",height=" + popupHeight + 
+          ",left=" + customLeft + 
+          ",top=" + customTop + 
+          ",menubar=no,toolbar=no,scrollbars=no,status=no,location=no,directories=no,resizable=no"
+      );
 
-        // 팝업창 위치 계산
-//        var popupLeft = customLeft !== null ? customLeft : (browserWidth - popupWidth) / 2 + window.screenX;
-//       var popupTop = customTop !== null ? customTop : (browserHeight - popupHeight) / 2 + window.screenY;
+      if (!popup || popup.closed || typeof popup.closed == "undefined") {
+          alert("팝업이 차단되었습니다. 팝업 차단 설정을 확인해주세요.");
+      } else {
+          popups.push(popup);
+      }
+  }
 
-        // 팝업창 열기
-        popup = window.open(
-            url,
-            "popupWindow",
-            "width=" + popupWidth + 
-            ",height=" + popupHeight + 
-            ",left=" + customLeft + 
-            ",top=" + customTop + 
-            ",menubar=no,toolbar=no,scrollbars=no,status=no,location=no,directories=no,resizable=no"
-        );
+  function closeAllPopups() {
+      popups.forEach(popup => {
+          if (popup && !popup.closed) {
+              popup.close();
+          }
+      });
+      popups = [];
+  }
 
-      
-        if (!popup || popup.closed || typeof popup.closed == "undefined") {
-            alert("팝업이 차단되었습니다. 팝업 차단 설정을 확인해주세요.");
-        }
-    }
-  
-    function updatetime_hd() {
+  function updatetime_hd() {
       var now = new Date();
       var hours = String(now.getHours()).padStart(2, '0');
       var minutes = String(now.getMinutes()).padStart(2, '0');
@@ -294,12 +286,11 @@
 
       document.getElementById('time_hd').textContent = time_hdString;
       document.getElementById('date').textContent = dateString;
-    }
+  }
 
-    setInterval(updatetime_hd, 1000);
-    updatetime_hd();  // 페이지 로드 시 즉시 시간과 날짜 업데이트
+  setInterval(updatetime_hd, 1000);
+  updatetime_hd();
+</script>
 
-
-  </script>
 </body>
 </html>

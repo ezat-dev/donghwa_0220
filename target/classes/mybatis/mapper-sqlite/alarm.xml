@@ -61,4 +61,29 @@
     ORDER BY time DESC
 	limit 10
 </select>
+
+
+
+
+
+
+
+	 <select id="alarmData" resultType="alarm"> 
+    SELECT *
+    FROM (
+        SELECT 
+            *,
+            LEAD(alarmstate) OVER (PARTITION BY tagname ORDER BY time) AS lead_alarmstate,
+            LEAD(time) OVER (PARTITION BY tagname ORDER BY time) AS lead_alarmtime
+        FROM ALARMDATA
+        WHERE 1=1  
+        ORDER BY time
+    ) AS aa
+    WHERE 1=1
+    AND alarmstate = 'Warning'
+	and lead_alarmstate is null
+    ORDER BY time DESC;
+
+	    
+    </select>
 </mapper>

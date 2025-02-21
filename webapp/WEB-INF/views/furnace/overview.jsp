@@ -46,6 +46,17 @@
         left: 511px; 
     }
 
+
+    .table3-container {
+        position: absolute;
+        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 27px;
+        width: 200px;
+        left: 511px; 
+    }
     .table {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -125,12 +136,12 @@
         display: grid;
         grid-template-columns: 1fr; /* 1개의 열로 설정하여 수직 배치 */
         gap: 10px;
-     	width: 255px;
-        height: 190px;
+     	width: 200px;
+        height: 180px;
         
         position: absolute;
-        top: 671px;
-        left: 1236px;
+        top: 673px;
+        left: 1266px;
         font-size:12px;
     }
 
@@ -240,16 +251,16 @@
 
    <div class="table-container2">
     
-     <div class="table table7">
+     <div class="table2 table7">
       <div class="table-header">High-vacuum</div>
-      <div class="capacity_3" >PIS 6.24</div>
+      
       <div class="capacity_3 D-7800">-- kN</div>
     </div>
     
     
-    <div class="table table8">
+    <div class="table2 table8">
       <div class="table-header">Fore-vacuum</div>
-      <div class="capacity_3">PIS 6.25</div>
+     
       <div class="capacity_3 D-7810">--</div>
     </div>
  </div>
@@ -270,11 +281,11 @@
     <div class="obj-line-3"></div>
     <div class="obj-line-4"></div>
     <div class="component-1">
-      <div class="pillar-rec-1"></div>
+      <div class="pillar-rec-1 lamp-8030"></div>
       <img class="pillar-1" src="/donghwa/css/furnace/img/pillar-10.png" />
     </div>
     <div class="component-2">
-      <div class="pillar-rec-2"></div>
+      <div class="pillar-rec-2 lamp-8030"></div>
       <img class="pillar-2" src="/donghwa/css/furnace/img/pillar-20.png" />
     </div>
     <img class="component-3 mchLclose" src="/donghwa/css/furnace/img/component-30.svg" />
@@ -395,6 +406,9 @@ function overviewListView(){
 						Lclose(keys, d[keys].value);
 					}else if(d[keys].action == "img"){
 						img(keys, d[keys].value);	
+
+					}else if(d[keys].action == "lamp"){
+						lamp(keys, d[keys].value);
 					}else if(d[keys].action == "value"){
 						value(keys, d[keys].value);
 					}
@@ -403,6 +417,16 @@ function overviewListView(){
         }
 		}
 	});
+}
+
+function lamp(keys, value) {
+    if (keys === "lamp-8030") {
+        if (value === true) {
+            $("." + keys).css("background-color", "red"); 
+        } else {
+            $("." + keys).css("background-color", ""); 
+        }
+    }
 }
 
 
@@ -458,8 +482,7 @@ function v(keys, value){
 
 function value(keys, value){
     var truncatedValue = Math.floor(value * 10) / 10;
-    console.log("키: " + keys + ", 잘린 값: " + truncatedValue);
-
+   
     // D-7800 처리
     if (keys === "D-7800") {
 

@@ -54,6 +54,12 @@ public class AnalysisController {
 		return "/analysis/alarmHistory.jsp";
 	}
 	
+	//알람데이타
+	@RequestMapping(value = "/analysis/alarmData", method = RequestMethod.GET)
+	public String alarmData(Model model) {
+		return "/analysis/alarmData.jsp";
+	}
+	
 	
 	
 	

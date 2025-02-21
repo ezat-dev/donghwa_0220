@@ -27,9 +27,9 @@
   <div class="plc-manual"></div>
   <div class="manual2">Manual</div>
   
-  <div class="pumping asd-pumping"></div>
-  <div class="plc-pumping asd-pumping"></div>
-  <div class="pumping-station asd-pumping">Pumping station</div>
+  <div class="pumping 			asd-pumping"></div>
+  <div class="plc-pumping 		asd-pumping"></div>
+  <div class="pumping-station   asd-pumping">Pumping station</div>
   
   
   <div class="high-vacuum-pump asd-high-vacuum-pump"></div>
@@ -37,24 +37,24 @@
   <div class="high-vacuum-pump2 asd-high-vacuum-pump">High vacuum pump</div>
   
   
-  <div class="evacuate-fine asd-evacuate-fine"></div>
-  <div class="plc-evacuate-fine asd-evacuate-fine"></div>
-  <div class="evacuate-fine-vaccum asd-evacuate-fine">Evacuate Fine Vaccum</div>
+  <div class="evacuate-fine 		asd-evacuate-fine"></div>
+  <div class="plc-evacuate-fine 	asd-evacuate-fine"></div>
+  <div class="evacuate-fine-vaccum 	asd-evacuate-fine">Evacuate Fine Vaccum</div>
   
   
-  <div class="evacuate-high asd-evacuate-high"></div>
-  <div class="plc-evacuate-high asd-evacuate-high"></div>
-  <div class="evacuate-high-vaccum asd-evacuate-high">Evacuate High Vaccum</div>
+  <div class="evacuate-high 			asd-evacuate-high"></div>
+  <div class="plc-evacuate-high 		asd-evacuate-high"></div>
+  <div class="evacuate-high-vaccum 		asd-evacuate-high">Evacuate High Vaccum</div>
   
   
-  <div class="fur-pre-control asd-fur-pre-control"></div>
-  <div class="plc-fur-pre-control asd-fur-pre-control"></div>
-  <div class="furnace-pressure-control asd-fur-pre-control">Furnace Pressure Control</div>
+  <div class="fur-pre-control 			asd-fur-pre-control"></div>
+  <div class="plc-fur-pre-control 		asd-fur-pre-control"></div>
+  <div class="furnace-pressure-control	asd-fur-pre-control">Furnace Pressure Control</div>
   
   
-  <div class="fur-hit asd-fur-hit"></div>
-  <div class="plc-fur-hit asd-fur-hit"></div>
-  <div class="furnace-heating asd-fur-hit">Furnace heating</div>
+  <div class="fur-hit 			asd-fur-hit"></div>
+  <div class="plc-fur-hit 		asd-fur-hit"></div>
+  <div class="furnace-heating 	asd-fur-hit">Furnace heating</div>
   
   
   <div class="n-2 asd-n-2"></div>
@@ -62,9 +62,9 @@
   <div class="n-2-inlet asd-n-2">N2-Inlet</div>
   
   
-  <div class="ar asd-ar"></div>
-  <div class="plc-ar asd-ar"></div>
-  <div class="ar-inlet asd-ar">Ar Inlet</div>
+  <div class="ar 			asd-ar"></div>
+  <div class="plc-ar 		asd-ar"></div>
+  <div class="ar-inlet 		asd-ar">Ar Inlet</div>
   
   
   <div class="venting asd-venting asd-venting"></div>
@@ -148,22 +148,33 @@ function overviewListView() {
 
 function v(keys, value){
 	
+/*
+    if(keys.indexOf("evacuate-high") != -1){
+    	console.log("v() 호출: keys =", keys, ", value =", value);
+    }
+*/
+    if(keys.indexOf("close-lid") != -1){
+    	console.log("v() 호출: keys =", keys, ", value =", value);
+    }
+	
+	
 	if(value == true){
 		$("."+keys).css("background-color","#A9A9A9");
-
 	}else{
-		$("."+keys).css("background-color","yelow");
+		$("."+keys).css("background-color","yellow");
 
 	}
-
+/*
 	$("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+keys+"')");
 	$("."+keys).css("cursor","pointer");
+*/	
 }
 
 
 
 
 function value(keys, value){
+//	console.log("value() 호출: keys =", keys, ", value =", value);
 	$("."+keys).text(value);
 	$("."+keys).css("text-align","center");
 	$("."+keys).css("font-size","12pt");
@@ -171,6 +182,17 @@ function value(keys, value){
 }
 
 function asd(keys, value) {
+	
+/*
+    if(keys.indexOf("asd-evacuate-high") != -1){
+    	console.log("asd() 호출: keys =", keys, ", value =", value);
+    }
+*/
+    if(keys.indexOf("asd-close-lid") != -1){
+    	console.log("asd() 호출: keys =", keys, ", value =", value);
+    }
+
+	
     if (value == true) {
 
 		var valuesArray = keys.split("-");
@@ -187,7 +209,7 @@ function asd(keys, value) {
 		}
 //		rtnValue = rtnValue.substring(0,rtnValue.length-1);
 
-		console.log(rtnValue);
+//		console.log(rtnValue);
         
         $("." + keys).removeAttr("disabled",false); 
         $("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+rtnValue+"')");
@@ -202,6 +224,14 @@ function asd(keys, value) {
 
 
 function plc(keys, value) {
+    if(keys.indexOf("plc-close-lid") != -1){
+		console.log("plc() 호출: keys =", keys, ", value =", value);
+    }
+/*
+    if(keys.indexOf("plc-evacuate-high") != -1){
+		console.log("plc() 호출: keys =", keys, ", value =", value);
+    }
+*/
     if (value == true) {
         $("." + keys).css("background-color", "green"); 
     } else {
