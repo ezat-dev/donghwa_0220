@@ -44,16 +44,8 @@ public class ActionMap {
 			//t-tong 또는 b-tong
 			result = "value";			
 		}else{
-			if(tagName.contains("Ropen")){
-				result = "Ropen";
-			}else if(tagName.contains("Lopen")) {
-				result = "Lopen";
-			}else if(tagName.contains("Rclose")) {
-				result = "Rclose";	
-			}else if(tagName.contains("Rdclose")) {
-				result = "Rdclose";	
-			}else if(tagName.contains("Lclose")) {
-				result = "Lclose";	
+			if(tagName.contains("-img2")){
+				result = "-img2";
 			}else if(tagName.contains("-img")) {
 				result = "img";	
 			}else if(tagName.contains("asd-")) {

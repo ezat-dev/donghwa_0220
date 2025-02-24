@@ -92,6 +92,28 @@ public class MainController {
     }		
 	
     
+  //022 float
+    @RequestMapping(value= "/common/valueFloatSet", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> valueFloatSet(
+            @RequestParam String sendTagDir,
+            @RequestParam String sendTagName,
+            @RequestParam float sendTagValue 
+    ) throws UaException, InterruptedException, ExecutionException {
+        Map<String, Object> returnMap = new HashMap<>();
+
+        OpcDataMap opcDataMap = new OpcDataMap();
+        // 값 확인
+        System.out.println("sendTagDir : " + sendTagDir + 
+                           " // sendTagName : " + sendTagName + 
+                           " // sendTagValue : " + sendTagValue);
+        
+        opcDataMap.setOpcData(sendTagDir + "." + sendTagName, sendTagValue);
+
+        return returnMap;    	
+    }
+
+    
     
 	
 	

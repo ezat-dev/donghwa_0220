@@ -178,15 +178,7 @@
 	
 
 
-	.g-box {
-	    width: 80px;
-	    height: 180px;
-	    background-color: #E2E2E2;
-	    left: 1100px;
-	    top: 863px;
-	    position: absolute;
-	    z-index: 9999;
-	}
+
 	.g-box2 {
 	    width: 80px;
 	    height: 78px;
@@ -288,8 +280,8 @@
       <div class="pillar-rec-2 lamp-8030"></div>
       <img class="pillar-2" src="/donghwa/css/furnace/img/pillar-20.png" />
     </div>
-    <img class="component-3 mchLclose" src="/donghwa/css/furnace/img/component-30.svg" />
-    <img class="component-4 mchLopen" src="/donghwa/css/furnace/img/component-40.svg" />
+    <img class="component-3 Ldclose" src="/donghwa/css/furnace/img/component-30.svg" />
+    <img class="component-4 Ldopen" src="/donghwa/css/furnace/img/component-40.svg" />
     <div class="value-1 tx">12.2</div>
     <div class="value-2 tx">12.2</div>
     <div class="value-3 tx">6.1</div>
@@ -304,17 +296,17 @@
     <div class="value-12 tx">Air</div>
     <div class="value-13 tx">Ar</div>
     <img class="component-5 Rdclose" src="/donghwa/css/furnace/img/component-50.svg" />
-    <img class="component-6 mchRopen" src="/donghwa/css/furnace/img/component-60.svg" />
+    <img class="component-6 Rdopen" src="/donghwa/css/furnace/img/component-60.svg" />
   
-    <img class="vector-1 mchLopen" src="/donghwa/css/furnace/img/vector-10.svg" />
-    <img class="vector-2 mchLclose" src="/donghwa/css/furnace/img/vector-20.svg" style="background-color: green;" />
-    <img class="vector-3 mchLopen" src="/donghwa/css/furnace/img/vector-30.svg" />
-    <img class="vector-4 mchLclose" src="/donghwa/css/furnace/img/vector-40.svg" style="background-color: green;" />
+    <img class="vector-1 Lcopen" src="/donghwa/css/furnace/img/vector-10.svg" />
+    <img class="vector-2 Lcclose" src="/donghwa/css/furnace/img/vector-20.svg" style="background-color: green;" />
+    <img class="vector-3 Lcopen" src="/donghwa/css/furnace/img/vector-30.svg" />
+    <img class="vector-4 Lcclose" src="/donghwa/css/furnace/img/vector-40.svg" style="background-color: green;" />
    
-    <img class="vector-5 mchRopen" src="/donghwa/css/furnace/img/vector-10.svg" />
-    <img class="vector-6 Rdclose" src="/donghwa/css/furnace/img/vector-20.svg"style="background-color: green;" />
-    <img class="vector-7 mchRopen" src="/donghwa/css/furnace/img/vector-30.svg" />
-    <img class="vector-8 Rdclose" src="/donghwa/css/furnace/img/vector-40.svg"style="background-color: green;" />
+    <img class="vector-5 Rcclose" src="/donghwa/css/furnace/img/vector-10.svg" />
+    <img class="vector-6 Rcopen" src="/donghwa/css/furnace/img/vector-20.svg"style="background-color: green;" />
+    <img class="vector-7 Rcclose" src="/donghwa/css/furnace/img/vector-30.svg" />
+    <img class="vector-8 Rcopen" src="/donghwa/css/furnace/img/vector-40.svg"style="background-color: green;" />
     
     <div class="pipe-1"></div>
     <div class="pipe-2"></div>
@@ -437,56 +429,82 @@ function img(keys, value) {
         $("." + keys).fadeOut(200); 
     }
 }
-function Ropen(keys, value) {
-    if (value === true) {
-        $("." + keys).fadeIn(200); 
-    } else {
-        $("." + keys).fadeOut(200); 
-    }
-}
-
-function Lopen(keys, value) {
-    if (value === true) {
-        $("." + keys).fadeIn(200); 
-    } else {
-        $("." + keys).fadeOut(200); 
-    }
-}
-
-function Rclose(keys, value) {
-    if (value === true) {
-        $("." + keys).fadeIn(200); 
-    } else {
-        $("." + keys).fadeOut(200); 
-    }
-}
-
-function Rdclose(keys, value) {
-    if (value === true) {
-        $("." + keys).fadeIn(200); 
-    } else {
-        $("." + keys).fadeOut(200); 
-    }
-}
-
-
-function Lclose(keys, value) {
-    if (value === true) {
-        $("." + keys).fadeIn(200); 
-    } else {
-        $("." + keys).fadeOut(200);
-    }
-}
 
 
 function v(keys, value){
-	if(value == true){
-		$("."+keys).css("color","black");
+    console.log("keys:", keys, "value:", value);  
+    
+    if(value === true){
+        $("."+keys).css("color", "black");
+    }
+    
+    if (keys === "Ldclose") {
+        if (value === true) {
+            $("." + keys).css("visibility", "visible");
+        } else if (value === false) {
+            $("." + keys).css("visibility", "hidden");
+        }
+    }
 
-	}else{
+    if (keys === "Ldopen") {
+        if (value === true) {
+            $("." + keys).css("visibility", "hidden");
+        } else if (value === false) {
+            $("." + keys).css("visibility", "visible");
+        }
+    }
 
-	}	
+    if (keys === "Rdclose") {
+        if (value === true) {
+            $("." + keys).css("visibility", "visible");
+        } else if (value === false) {
+            $("." + keys).css("visibility", "hidden");
+        }
+    }
+
+    if (keys === "Rdopen") {
+        if (value === true) {
+            $("." + keys).css("visibility", "hidden");
+        } else if (value === false) {
+            $("." + keys).css("visibility", "visible");
+        }
+    }
+
+    if (keys === "Lcclose") {
+        if (value === true) {
+            $("." + keys).css("visibility", "visible");
+        } else if (value === false) {
+            $("." + keys).css("visibility", "hidden");
+        }
+    }
+
+    if (keys === "Lcopen") {
+        if (value === false) {
+            $("." + keys).css("visibility", "visible");
+        } else if (value === true) {
+            $("." + keys).css("visibility", "hidden");
+        }
+    }
+
+ 
+    if (keys === "Rcopen") {
+        if (value === true) {
+            $("." + keys).css("visibility", "visible");
+        } else if (value === false) {
+            $("." + keys).css("visibility", "hidden");
+        }
+    }
+
+
+    if (keys === "Rcclose") {
+        if (value === false) {
+            $("." + keys).css("visibility", "visible");
+        } else if (value === true) {
+            $("." + keys).css("visibility", "hidden");
+        }
+    }
 }
+
 
 
 function value(keys, value){

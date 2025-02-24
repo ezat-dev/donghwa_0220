@@ -240,27 +240,32 @@ public class OpcDataMap {
 			rtnMap.put("status", "NG");
 		}
 	}
-	
+	//0224
 	public void setOpcData(String opcGroup, float opcData) throws InterruptedException, ExecutionException {
-	    Map<String, Object> rtnMap = new HashMap<>();
-	    
-	    UShort namespaceIndex = Unsigned.ushort(2);
-	    NodeId nodeId = new NodeId(namespaceIndex, opcGroup);
-	    
-	
-	    DataValue dataValue = new DataValue(new Variant(opcData));
-	    
-	    CompletableFuture<StatusCode> writeFuture = MainController.client.writeValue(nodeId, dataValue);
-	    StatusCode statusCode = writeFuture.get();
-	    
-	    if (statusCode.isGood()) {
-	        rtnMap.put("status", "OK");
-	    } else {
-	        rtnMap.put("status", "NG");
-	    }
-	}
 
-	
+	Map<String, Object> rtnMap = new HashMap<String, Object>();
+			
+			
+			UShort namespaceIndex = Unsigned.ushort(2);
+			
+			
+			NodeId nodeId = new NodeId(namespaceIndex, opcGroup);
+			
+			DataValue dataValue = new DataValue(new Variant(opcData));
+			
+			CompletableFuture<StatusCode> writeFuture = MainController.client.writeValue(nodeId, dataValue);
+			
+			StatusCode statusCode = writeFuture.get();
+			
+
+			if (statusCode.isGood()) {
+	//            System.out.println("Value written successfully");
+				rtnMap.put("status", "OK");
+			} else {
+	//            System.out.println("Failed to write value: " + statusCode);
+				rtnMap.put("status", "NG");
+			}
+		}
 	
 	//OPC태그값 1개 조회
 	public Map<String, Object> getOpcData(String opcTag) throws InterruptedException, ExecutionException{

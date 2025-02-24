@@ -38,10 +38,10 @@
    
    .limitBox {
 	  background: #ffffff;
-	  width: 120px;
-
+	
+      width: 100px;
 	  position: absolute;
-	  left: 492px;
+	  left: 508px;
 	  top: 118px;
 	  display: flex;
 	  align-items: center;
@@ -55,10 +55,10 @@
 	
 	   .hysBox {
 	  background: #ffffff;
-	  width: 120px;
+	    width: 100px;
 
 	  position: absolute;
-	  left: 645px;
+	  left: 657px;
 	  top: 118px;
 	  display: flex;
 	  align-items: center;
@@ -66,11 +66,22 @@
 
 	}
 	.txF{
-	font-size:25px;
+ 	position: absolute;
+    left: 48px;
+    top: 8.9px;
+    font-size: 25px;
+    z-index: 9999;
 	}
 	
+	.txF2 {
+ 	position: absolute;
+    left: 41px;
+    top: 8.9px;
+    font-size: 25px;
+    z-index: 9999;
+	}
 	.hysBox1, .txE2, .hysBox2 {
-	  margin: 0 6px;
+	  margin: 0 16px;
 	}
    </style>
   <title>Document</title>
@@ -139,7 +150,7 @@
     
     <div class="hysBox">
     <div class="hys1">0.0</div>
-     <div class="txE2 txF">E</div>
+     <div class="txE2 txF2">E</div>
     <div class="hys2">00</div>
      </div>
     <script>
@@ -232,7 +243,7 @@
     	$("."+keys).css("display","");
     	$("."+keys).css("text-align","center");
     //	$("."+keys).css("font-weight","700");
-    	$("."+keys).css("font-size","18pt");
+    	$("."+keys).css("font-size","21pt");
     	$("."+keys).css("padding-top","5px");
     	$("."+keys).attr("ondblclick","popupOpenAna('"+keys+"','DONGHWA.PARAMETER.LITMIT_SWITCHES')");
     	$("."+keys).css("cursor","pointer");

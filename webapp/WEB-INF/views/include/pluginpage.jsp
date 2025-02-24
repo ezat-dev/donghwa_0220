@@ -178,7 +178,7 @@ function analogDataSave(){
 
 	
 	$.ajax({
-	    url: "/donghwa/common/valueAnalogSet",
+	    url: "/donghwa/common/valueFloatSet",
 	    type: "post",
 	    dataType: "json",
 	    data: {
