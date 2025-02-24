@@ -33,4 +33,18 @@ public class ParameterController {
     public String timerPop(Model model) {
         return "/parameter/timerPop.jsp";
     }
+    
+
+    //limitSwitchesPop
+    @RequestMapping(value= "/parameter/limitSwitchesPop/view", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> footer() throws UaException, InterruptedException, ExecutionException {
+    	Map<String, Object> returnMap = new HashMap<String, Object>();
+
+    	OpcDataMap opcDataMap = new OpcDataMap();
+    	
+    	returnMap = opcDataMap.getOpcDataListMap("DONGHWA.PARAMETER.LITMIT_SWITCHES");
+    	
+    	return returnMap;    	
+    }	
 }

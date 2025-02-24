@@ -63,10 +63,10 @@
     <div class="programmer"></div>
     <div class="startconditions"></div>
     <div class="batchdata"></div>
-    <div class="automatic2" onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 502, 379.8, 730, 235);">Automatic</div>
-    <div class="programmer2" onclick="popupClick('/donghwa/furnace/automaticProgramPop2', 502, 379.8, 730, 235);">Programmer</div>
-    <div class="startconditions2"onclick="popupClick('/donghwa/furnace/automaticProgramPop3', 502, 379.8, 730, 235);">Startconditions</div>
-    <div class="batch-data" onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 379.8, 730, 235);">Batch data</div>
+    <div class="automatic2" onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 393, 730, 235);">Automatic</div>
+    <div class="programmer2" onclick="popupClick('/donghwa/furnace/automaticProgramPop2', 502, 393, 730, 235);">Programmer</div>
+    <div class="startconditions2"onclick="popupClick('/donghwa/furnace/automaticProgramPop3', 502, 393, 730, 235);">Startconditions</div>
+    <div class="batch-data" onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 502, 393, 730, 235);">Batch data</div>
     <div class="id-0"></div>
     <div class="id-1"></div>
     <div class="id-2"></div>

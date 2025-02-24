@@ -84,12 +84,15 @@ public class MainController {
     	Map<String, Object> returnMap = new HashMap<String, Object>();
     	
     	OpcDataMap opcDataMap = new OpcDataMap();
-    	
+    	//확인
+    	System.out.println("sendTagDir : "+sendTagDir+"// sendTagName : "+sendTagName+"// sendTagValue : "+sendTagValue);
     	opcDataMap.setOpcData(sendTagDir+"."+sendTagName, sendTagValue);
     	
     	return returnMap;    	
     }		
 	
+    
+    
 	
 	
 }

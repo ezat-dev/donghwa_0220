@@ -144,7 +144,7 @@
         <li onclick="menuClick('/donghwa/');">Overview</li>
         <li onclick="popupClick('/donghwa/furnace/manualOperationPop', 311, 619, 730, 180);">Manual Operation</li> <!--가로 세로 오른쪽 시작 위쪽 시작 -->
 		<li onclick="popupClick('/donghwa/furnace/operationPressPop', 410.5, 482.5, 730, 210);">Operation Press</li><!--길면 180 짧으면 225이상 -->
-		<li onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 502, 379.8, 730, 235);">Automatic program</li>
+		<li onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 393, 730, 235);">Automatic program</li>
 
         <li onclick="menuClick('/donghwa/furnace/recipe');">Recipe</li>
       </ul>
@@ -172,9 +172,9 @@
     <li>
       Parameter
       <ul class="submenu">
-        <li onclick="popupClick('/donghwa/parameter/limitSwitchesPop', 743, 272, 550, 200);">Limit switches</li>
-        <li onclick="popupClick('/donghwa/parameter/fastcoolingPop', 529, 333, 600, 180);">Fastcooling</li>
-        <li onclick="popupClick('/donghwa/parameter/time_hdrPop', 727, 355, 600, 180);">time_hdr</li>
+        <li onclick="popupClick('/donghwa/parameter/limitSwitchesPop', 756, 282, 550, 200);">Limit switches</li>
+        <li onclick="popupClick('/donghwa/parameter/fastcoolingPop', 539, 340, 600, 180);">Fastcooling</li>
+        <li onclick="popupClick('/donghwa/parameter/timerPop', 734, 367, 600, 180);">Timer</li>
         <li onclick="popupClick('/', 505, 505, 584, 180);">Calibrate TC measuring syst</li>
       </ul>
     </li>

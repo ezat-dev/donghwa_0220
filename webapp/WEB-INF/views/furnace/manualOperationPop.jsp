@@ -147,34 +147,24 @@ function overviewListView() {
 
 
 function v(keys, value){
-	
-/*
-    if(keys.indexOf("evacuate-high") != -1){
-    	console.log("v() 호출: keys =", keys, ", value =", value);
-    }
-*/
-    if(keys.indexOf("close-lid") != -1){
-    	console.log("v() 호출: keys =", keys, ", value =", value);
-    }
-	
-	
+	console.log("v() 호출: keys =", keys, ", value =", value);
 	if(value == true){
 		$("."+keys).css("background-color","#A9A9A9");
+
 	}else{
-		$("."+keys).css("background-color","yellow");
+		$("."+keys).css("background-color","yelow");
 
 	}
-/*
+
 	$("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+keys+"')");
 	$("."+keys).css("cursor","pointer");
-*/	
 }
 
 
 
 
 function value(keys, value){
-//	console.log("value() 호출: keys =", keys, ", value =", value);
+	console.log("value() 호출: keys =", keys, ", value =", value);
 	$("."+keys).text(value);
 	$("."+keys).css("text-align","center");
 	$("."+keys).css("font-size","12pt");
@@ -182,15 +172,8 @@ function value(keys, value){
 }
 
 function asd(keys, value) {
-	
-/*
-    if(keys.indexOf("asd-evacuate-high") != -1){
-    	console.log("asd() 호출: keys =", keys, ", value =", value);
-    }
-*/
-    if(keys.indexOf("asd-close-lid") != -1){
-    	console.log("asd() 호출: keys =", keys, ", value =", value);
-    }
+	console.log("asd() 호출: keys =", keys, ", value =", value);
+
 
 	
     if (value == true) {
@@ -209,7 +192,7 @@ function asd(keys, value) {
 		}
 //		rtnValue = rtnValue.substring(0,rtnValue.length-1);
 
-//		console.log(rtnValue);
+		console.log(rtnValue);
         
         $("." + keys).removeAttr("disabled",false); 
         $("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+rtnValue+"')");
@@ -224,14 +207,9 @@ function asd(keys, value) {
 
 
 function plc(keys, value) {
-    if(keys.indexOf("plc-close-lid") != -1){
-		console.log("plc() 호출: keys =", keys, ", value =", value);
-    }
-/*
     if(keys.indexOf("plc-evacuate-high") != -1){
 		console.log("plc() 호출: keys =", keys, ", value =", value);
     }
-*/
     if (value == true) {
         $("." + keys).css("background-color", "green"); 
     } else {

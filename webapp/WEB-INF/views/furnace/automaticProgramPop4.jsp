@@ -59,13 +59,13 @@
     <div class="automatic-program">Automatic program</div>
 
     <div class="automatic"></div>
-    <div class="automatic-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 502, 379.8, 730, 235);">Automatic</div>
+    <div class="automatic-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 393, 730, 235);">Automatic</div>
     <div class="programmer"></div>
-    <div class="programmer-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop2', 502, 379.8, 730, 235);">Programmer</div>
+    <div class="programmer-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop2', 502, 393, 730, 235);">Programmer</div>
     <div class="start-conditions"></div>
-    <div class="startconditions-text"onclick="popupClick('/donghwa/furnace/automaticProgramPop3', 502, 379.8, 730, 235);">Startconditions</div>
+    <div class="startconditions-text"onclick="popupClick('/donghwa/furnace/automaticProgramPop3', 502, 393, 730, 235);">Startconditions</div>
     <div class="batch-data"></div>
-    <div class="batch-data-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 379.8, 730, 235);">Batch data</div>
+    <div class="batch-data-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 502, 393, 730, 235);">Batch data</div>
     <div class="program-number-box"></div>
     <div class="program-number-text">Program Number</div>
     <div class="program-name-box"></div>

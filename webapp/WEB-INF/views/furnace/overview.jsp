@@ -303,7 +303,7 @@
     <div class="value-11 tx">13.102</div>
     <div class="value-12 tx">Air</div>
     <div class="value-13 tx">Ar</div>
-    <img class="component-5 mchRclose" src="/donghwa/css/furnace/img/component-50.svg" />
+    <img class="component-5 Rdclose" src="/donghwa/css/furnace/img/component-50.svg" />
     <img class="component-6 mchRopen" src="/donghwa/css/furnace/img/component-60.svg" />
   
     <img class="vector-1 mchLopen" src="/donghwa/css/furnace/img/vector-10.svg" />
@@ -312,9 +312,9 @@
     <img class="vector-4 mchLclose" src="/donghwa/css/furnace/img/vector-40.svg" style="background-color: green;" />
    
     <img class="vector-5 mchRopen" src="/donghwa/css/furnace/img/vector-10.svg" />
-    <img class="vector-6 mchRclose" src="/donghwa/css/furnace/img/vector-20.svg"style="background-color: green;" />
+    <img class="vector-6 Rdclose" src="/donghwa/css/furnace/img/vector-20.svg"style="background-color: green;" />
     <img class="vector-7 mchRopen" src="/donghwa/css/furnace/img/vector-30.svg" />
-    <img class="vector-8 mchRclose" src="/donghwa/css/furnace/img/vector-40.svg"style="background-color: green;" />
+    <img class="vector-8 Rdclose" src="/donghwa/css/furnace/img/vector-40.svg"style="background-color: green;" />
     
     <div class="pipe-1"></div>
     <div class="pipe-2"></div>
@@ -460,6 +460,15 @@ function Rclose(keys, value) {
         $("." + keys).fadeOut(200); 
     }
 }
+
+function Rdclose(keys, value) {
+    if (value === true) {
+        $("." + keys).fadeIn(200); 
+    } else {
+        $("." + keys).fadeOut(200); 
+    }
+}
+
 
 function Lclose(keys, value) {
     if (value === true) {

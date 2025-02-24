@@ -50,6 +50,8 @@ public class ActionMap {
 				result = "Lopen";
 			}else if(tagName.contains("Rclose")) {
 				result = "Rclose";	
+			}else if(tagName.contains("Rdclose")) {
+				result = "Rdclose";	
 			}else if(tagName.contains("Lclose")) {
 				result = "Lclose";	
 			}else if(tagName.contains("-img")) {

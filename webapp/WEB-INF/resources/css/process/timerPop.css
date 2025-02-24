@@ -1,0 +1,422 @@
+
+.hamburger-icon-svg-1 {
+  width: 33px;
+  height: 26.56px;
+  position: absolute;
+  left: 13px;
+  top: 36.21px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+  object-fit: cover;
+}
+.timer-box {
+  background: #d9d9d9;
+  width: 913px;
+  height: 453px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.timer-header {
+  background: #282828;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 913px;
+  height: 54px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.timer-main {
+  background: #e6e6e6;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 913px;
+  height: 401px;
+  position: absolute;
+  left: 0px;
+  top: 52px;
+}
+.close {
+  width: 26px;
+  height: 30px;
+  position: absolute;
+  left: 878px;
+  top: 11px;
+  object-fit: cover;
+}
+.timer-text {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  width: 145px;
+  height: 42px;
+  -webkit-text-stroke: 1px #000000;
+}
+.no {
+  background: #ffffff;
+  width: 47px;
+  height: 54px;
+  position: absolute;
+  left: 13px;
+  top: 70px;
+}
+.description {
+  background: #ffffff;
+  width: 462px;
+  height: 54px;
+  position: absolute;
+  left: 68px;
+  top: 70px;
+}
+.set-point {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 538px;
+  top: 70px;
+}
+.actual-value {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 723px;
+  top: 70px;
+}
+._1 {
+  background: #ffffff;
+  width: 47px;
+  height: 53px;
+  position: absolute;
+  left: 13px;
+  top: 133px;
+}
+.box-1 {
+  background: #ffffff;
+  width: 462px;
+  height: 53px;
+  position: absolute;
+  left: 68px;
+  top: 133px;
+}
+.box-1-point {
+  background: #ffffff;
+  width: 177px;
+  height: 53px;
+  position: absolute;
+  left: 538px;
+  top: 133px;
+}
+.box-1-val {
+  background: #ffffff;
+  width: 177px;
+  height: 53px;
+  position: absolute;
+  left: 723px;
+  top: 133px;
+}
+._2 {
+  background: #ffffff;
+  width: 47px;
+  height: 54px;
+  position: absolute;
+  left: 13px;
+  top: 195px;
+}
+.box-2 {
+  background: #ffffff;
+  width: 462px;
+  height: 54px;
+  position: absolute;
+  left: 68px;
+  top: 195px;
+}
+.box-2-point {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 538px;
+  top: 195px;
+}
+.box-2-val {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 723px;
+  top: 195px;
+}
+._3 {
+  background: #ffffff;
+  width: 47px;
+  height: 54px;
+  position: absolute;
+  left: 13px;
+  top: 257px;
+}
+.box-3 {
+  background: #ffffff;
+  width: 462px;
+  height: 54px;
+  position: absolute;
+  left: 68px;
+  top: 257px;
+}
+.box-3-point {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 538px;
+  top: 257px;
+}
+.box-3-val {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 723px;
+  top: 257px;
+}
+._6 {
+  background: #ffffff;
+  width: 47px;
+  height: 54px;
+  position: absolute;
+  left: 13px;
+  top: 319px;
+}
+.box-6 {
+  background: #ffffff;
+  width: 462px;
+  height: 54px;
+  position: absolute;
+  left: 68px;
+  top: 319px;
+}
+.box-6-point {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 538px;
+  top: 319px;
+}
+.box-6-val {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 723px;
+  top: 319px;
+}
+._8 {
+  background: #ffffff;
+  width: 47px;
+  height: 54px;
+  position: absolute;
+  left: 13px;
+  top: 381px;
+}
+.box-8 {
+  background: #ffffff;
+  width: 462px;
+  height: 54px;
+  position: absolute;
+  left: 68px;
+  top: 381px;
+}
+.box-8-point {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 538px;
+  top: 381px;
+}
+.box-8-val {
+  background: #ffffff;
+  width: 177px;
+  height: 54px;
+  position: absolute;
+  left: 723px;
+  top: 381px;
+}
+._82 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 30px;
+  top: 391px;
+  width: 15px;
+  height: 37px;
+}
+.no2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 18px;
+  top: 80px;
+  width: 40px;
+  height: 36px;
+}
+.overpressure-leaktest-furnace {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 77px;
+  top: 142px;
+  width: 298px;
+  height: 33px;
+}
+.pumptime-prolongation-leaktest-furnace {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 77px;
+  top: 204px;
+  width: 395px;
+  height: 34px;
+}
+.vacuum-leaktest-furnace {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 77px;
+  top: 267px;
+  width: 244px;
+  height: 33px;
+}
+.monitoring-pumping-time-furnace {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 77px;
+  top: 329px;
+  width: 328px;
+  height: 33px;
+}
+._12 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 31px;
+  top: 142px;
+  width: 13px;
+  height: 38px;
+}
+._22 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 30px;
+  top: 204px;
+  width: 15px;
+  height: 38px;
+}
+._32 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 30px;
+  top: 267px;
+  width: 16px;
+  height: 37px;
+}
+._62 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 30px;
+  top: 329px;
+  width: 15px;
+  height: 37px;
+}
+.monitoring-filling-time-process-gas {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 77px;
+  top: 391px;
+  width: 338px;
+  height: 33px;
+}
+.description2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 77px;
+  top: 80px;
+  width: 136px;
+  height: 36px;
+}
+.setpoint {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 576px;
+  top: 81px;
+  width: 100px;
+  height: 36px;
+}
+.actual-value2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 746px;
+  top: 80px;
+  width: 145px;
+  height: 36px;
+}

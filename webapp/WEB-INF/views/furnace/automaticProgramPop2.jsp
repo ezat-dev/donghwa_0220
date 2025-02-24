@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./vars.css">
 <link rel="stylesheet" href="/donghwa/css/furnace/automaticProgramPop2.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<jsp:include page="../include/pluginpage.jsp"/>
   
   <style>
    a,
@@ -99,13 +99,13 @@
     <div class="automatic-program">Automatic program</div>
     
     <div class="automatic"></div>
-    <div class="automatic-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 502, 379.8, 730, 235);">Automatic</div>
+    <div class="automatic-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 393, 730, 235);">Automatic</div>
     <div class="programmer"></div>
-    <div class="programmer-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop2', 502, 379.8, 730, 235);">Programmer</div>
+    <div class="programmer-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop2', 502, 393, 730, 235);">Programmer</div>
     <div class="start-conditions"></div>
-    <div class="startconditions-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop3', 502, 379.8, 730, 235);">Startconditions</div>
+    <div class="startconditions-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop3', 502, 393, 730, 235);">Startconditions</div>
     <div class="batch-data"></div>
-    <div class="batch-data-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 379.8, 730, 235);">Batch data</div>
+    <div class="batch-data-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 502, 393, 730, 235);">Batch data</div>
     <div class="jump"></div>
     
     <div class="button-container">
@@ -123,7 +123,14 @@
     
     
     <div class="jump2">Jump</div>
-    <div class="jump-val"></div>
+ 
+    <div>
+     <div class="jump-val"></div>
+    </div>
+
+
+
+
     <div class="setpoint"></div>
     <div class="use-actual-value-as-setpoint">Use actual value as setpoint</div>
     <div class="ram-sav"></div>
@@ -147,6 +154,7 @@
     	overviewInterval = setInterval("overviewListView()", 500);
     });
 
+    
   //OPC값 알람 조회
     function overviewListView(){
     	$.ajax({
@@ -206,12 +214,21 @@
     */
 
     function value(keys, value){
-    	$("."+keys).text(value);
+    	if(!$("div").hasClass("anlog-popup-div-color")){
+    		$("."+keys).text(value);	
+    	}
+    	
+    	$("."+keys).css("display","");
     	$("."+keys).css("text-align","center");
-    	$("."+keys).css("font-size","20pt");
-    	
-    	
+    	$("."+keys).css("font-weight","700");
+    	$("."+keys).css("font-size","14pt");
+    	$("."+keys).css("padding-top","5px");
+    	$("."+keys).attr("ondblclick","popupOpenAna('"+keys+"','DONGHWA.FURNACE.AUTOMATIC_PROGRAM.PROGRAMMER')");
+    	$("."+keys).css("cursor","pointer");
+//    	$("."+keys).attr("contenteditable","true");
+
     }
+
   var popup;
   
   function modalClick(location){
@@ -321,8 +338,6 @@
       }
 
 
-    
-  //0117 돌림
         
 
   </script>

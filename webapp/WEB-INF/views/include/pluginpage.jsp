@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<!DOCTYPE html>
+<html lang="ko">
 <!-- jQuery -->
 <script type="text/javascript" src="/donghwa/js/jquery-3.7.1.min.js"></script>
 
@@ -28,10 +29,23 @@
 <style>
 	
 
+.anlog-popup-div-color{
+	background-color:lightblue;
+}
+
+.digital-popup-div-color{
+	background-color:lightblue !important;
+}
 
 	
 	
 </style>
+<body>
+
+
+	<input type="text" id="sendGroup" style="display: none;"/>
+	<input type="text" id="sendTag" style="display: none;"/>
+	<input type="text" id="sendVal" style="display: none;"/>
 	
 <script>
 
@@ -86,4 +100,137 @@ function paddingZero(value){
 	return returnValue;
 }
 
+//아날로그값 쓰기
+function popupOpenAna(keys, value){
+	//keys : 클래스
+	//tagDir : 오토닉스 그룹경로
+
+	
+	$("."+keys).addClass("anlog-popup-div-color");
+	$("."+keys).attr("contenteditable","true");
+	$("."+keys).focus();
+	$("."+keys).text("");
+	
+	$("#sendGroup").val(value);
+	$("#sendTag").val(keys);
+	
+//	modalOpen();
+}
+
+
+$("*").on("keydown",function(e){
+	console.log(e);
+	
+	//엔터키가 눌렸을 때
+	if(e.keyCode == 13){
+		var className = e.target.className;
+		
+		if(className.indexOf("anlog-popup-div-color") != -1){
+//			console.log("선택 엔터키");
+//			console.log(e);
+//			console.log(e.target.className);
+//			$("."+splitClassName[0]).focusOut();
+			
+//			console.log(e.target.innerHTML);
+
+			var splitClassName = e.target.className.split(" ");
+//			console.log(splitClassName[0]);
+			
+			$("#sendVal").val($("."+splitClassName[0]).text());				
+			
+			$("."+splitClassName[0]).removeClass("anlog-popup-div-color");
+			$("."+splitClassName[0]).blur();			
+			
+		
+			analogDataSave();
+		}
+	}else if(e.keyCode == 27){
+		//ESC
+		var className = e.target.className;
+		
+		if(className.indexOf("anlog-popup-div-color") != -1){
+			var splitClassName = e.target.className.split(" ");
+//			console.log("ESC");
+//			console.log(splitClassName[0]);
+			$("."+splitClassName[0]).removeClass("anlog-popup-div-color");
+			$("."+splitClassName[0]).blur();
+		}
+	}
+});
+
+function analogDataSave(){
+	var sendGroup = $("#sendGroup").val();
+	var sendTag = $("#sendTag").val();
+	var sendVal = $("#sendVal").val();
+	
+	if(sendVal.length <= 0){
+		alert("값을 입력하십시오!");
+		modalClose();
+		return false;
+	}
+	
+	const numRegex = /^[0-9]*\.?[0-9]+$/;
+
+	if(!numRegex.test(sendVal)){
+	    alert("숫자만 입력하십시오!");
+	    return false;
+	}
+
+	
+	$.ajax({
+	    url: "/donghwa/common/valueAnalogSet",
+	    type: "post",
+	    dataType: "json",
+	    data: {
+	        "sendTagDir": sendGroup,
+	        "sendTagName": sendTag,
+	        "sendTagValue": sendVal
+	    },
+	    success: function(result) {
+	        console.log(result); 
+//	        modalClose();
+	    }
+	});
+}
+
+$("*").on("click",function(e){
+/*
+	var className = e.target.className;
+	
+	if(className.indexOf("anlog-popup-div-color") != -1){
+		var splitClassName = e.target.className.split(" ");
+//		console.log("ESC");
+//		console.log(splitClassName[0]);
+		$("."+splitClassName[0]).removeClass("anlog-popup-div-color");
+		$("."+splitClassName[0]).blur();
+	}
+*/
+	$("*").removeClass("anlog-popup-div-color");
+	
+});
+
+
+$(document).ready(function(){
+	$("*").bind("selectstart", function(e){
+		return false;
+	});	
+});
+
+$("*").on("mouseup", function(e){
+
+	if($("*").hasClass("digital-popup-div-color")){
+		console.log("마우스 뗌 데이터 있음");
+
+		
+		clearInterval(btnInterval);
+		
+		$("*").removeClass("digital-popup-div-color");
+		
+		clickTime = 0;
+		$("#circle").css("display","none");		
+	}
+});
+
 </script>
+</body>
+</html>
