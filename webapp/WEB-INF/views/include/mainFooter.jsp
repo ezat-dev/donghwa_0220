@@ -175,8 +175,8 @@
         <div class="button bt_fire lamp-8030"><img src="/donghwa/css/furnace/img/fire3.png" alt="Warning"></div>
         <div class="button bt_man lamp-8031"><img src="/donghwa/css/furnace/img/danger3.png" alt="Alarm"></div>
         <div class="button bt_death lamp-8032"><img src="/donghwa/css/furnace/img/death3.png" alt="Info"></div>
-        <div class="button bt_sound"><img src="/donghwa/css/furnace/img/sound3.png" alt="no_sound"></div>
-        <div class="button bt_siren"><img src="/donghwa/css/furnace/img/siren3.png" alt="alarm"></div>
+        <div class="button bt_sound lamp-8033"><img src="/donghwa/css/furnace/img/sound3.png" alt="no_sound"></div>
+        <div class="button bt_siren lamp-8034"><img src="/donghwa/css/furnace/img/siren3.png" alt="alarm"></div>
          <div class="button bt_reset M-8035"><img src="/donghwa/css/furnace/img/reset3.png" alt="alarm"></div>
     </div>
 	<div id="tabulator-table2" class="tabulator"></div> 

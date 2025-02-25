@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./vars.css">
 <link rel="stylesheet" href="/donghwa/css/furnace/automaticProgramPop2.css">
 <jsp:include page="../include/pluginpage.jsp"/>
-
+   <jsp:include page="../include/commonPopupMain.jsp"/>
   <style>
    a,
    button,
@@ -145,7 +145,8 @@
     <div class="heating-vacuum"></div>
     <div class="heating-vacuum2">Heating Vacuum</div>
 
-    <script>
+     <script>
+
 
     var overviewInterval;
 
@@ -155,7 +156,6 @@
     	overviewInterval = setInterval("overviewListView()", 500);
     });
 
-    
   //OPC값 알람 조회
     function overviewListView(){
     	$.ajax({
@@ -199,20 +199,7 @@
     	$("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.AUTOMATIC_PROGRAM.PROGRAMMER','"+keys+"')");
     	$("."+keys).css("cursor","pointer");
     }
-    /*
-    function c(keys, value){
-//    	$("."+keys).text(value);
-    	
-    	if(value == true){
-    		$("."+keys).css("background-color","red");
-    		$("."+keys).css("color","white");
-    	}else{
-    		$("."+keys).css("background-color","green");
-    		$("."+keys).css("color","black");
-    	}
-    	
-    }
-    */
+
 
     function value(keys, value){
     	if(!$("div").hasClass("anlog-popup-div-color")){
@@ -221,15 +208,17 @@
     	
     	$("."+keys).css("display","");
     	$("."+keys).css("text-align","center");
-    	$("."+keys).css("font-weight","700");
-    	$("."+keys).css("font-size","14pt");
+    //	$("."+keys).css("font-weight","700");
+    	$("."+keys).css("font-size","15pt");
     	$("."+keys).css("padding-top","5px");
     	$("."+keys).attr("ondblclick","popupOpenAna('"+keys+"','DONGHWA.FURNACE.AUTOMATIC_PROGRAM.PROGRAMMER')");
     	$("."+keys).css("cursor","pointer");
-//    	$("."+keys).attr("contenteditable","true");
+    	$("."+keys).attr("align-items","center");
+    	$("."+keys).attr("margin-botoom","7px");
 
     }
 
+    
   var popup;
   
   function modalClick(location){
@@ -238,47 +227,9 @@
   }
   
   
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const menu = document.getElementById('hamburgerMenu');
+  
 
-    hamburgerIcon.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-
-    const menuItems = document.querySelectorAll('.menu > ul > li');
-
-    menuItems.forEach(item => {
-      item.addEventListener('click', (event) => {
-        menuItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            const submenu = otherItem.querySelector('.submenu');
-            if (submenu) {
-              submenu.classList.remove('active');
-              submenu.style.maxHeight = null;
-            }
-          }
-        });
-
-        const submenu = item.querySelector('.submenu');
-        if (submenu) {
-          submenu.classList.toggle('active');
-          if (submenu.classList.contains('active')) {
-            submenu.style.maxHeight = submenu.scrollHeight + "px";
-          } else {
-            submenu.style.maxHeight = null;
-          }
-        }
-
-        event.stopPropagation();
-      });
-    });
-
-    const historyTrendsItem = document.getElementById('historytrends');
-    if (historyTrendsItem) {
-      historyTrendsItem.addEventListener('click', () => {
-        window.location.href = 'RecipeTrend';
-      });
-    }
+     
 
     function menuClick(url) {
     	popup.close();
@@ -286,15 +237,11 @@
     }
 
     function popupClick(url, popupWidth, popupHeight, customLeft, customTop) {
-        // 브라우저 창 크기 가져오기
+
         var browserWidth = window.innerWidth; // 브라우저 가로 크기
         var browserHeight = window.innerHeight; // 브라우저 세로 크기
 
-        // 팝업창 위치 계산
-//        var popupLeft = customLeft !== null ? customLeft : (browserWidth - popupWidth) / 2 + window.screenX;
-//       var popupTop = customTop !== null ? customTop : (browserHeight - popupHeight) / 2 + window.screenY;
 
-        // 팝업창 열기
         popup = window.open(
             url,
             "popupWindow",
@@ -311,35 +258,11 @@
         }
     }
 
-    function startProgram() {
-        const userConfirmed = confirm("프로그램을 시작하시겠습니까?");
-        if (userConfirmed) {
-          alert("프로그램 시작");
-        } else {
-          alert("프로그램 시작 취소");
-        }
-      }
-
-      function pauseProgram() {
-        const userConfirmed = confirm("프로그램을 일시정지하시겠습니까?");
-        if (userConfirmed) {
-          alert("프로그램 일시정지");
-        } else {
-          alert("프로그램 일시정지 취소");
-        }
-      }
-
-      function stopProgram() {
-        const userConfirmed = confirm("프로그램을 종료하시겠습니까?");
-        if (userConfirmed) {
-          alert("프로그램 종료");
-        } else {
-          alert("프로그램 종료 취소");
-        }
-      }
 
 
-        
+ 
+
+
 
   </script>
 </body>

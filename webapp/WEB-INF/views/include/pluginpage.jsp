@@ -158,41 +158,49 @@ $("*").on("keydown",function(e){
 	}
 });
 
-function analogDataSave(){
-	var sendGroup = $("#sendGroup").val();
-	var sendTag = $("#sendTag").val();
-	var sendVal = $("#sendVal").val();
-	
-	if(sendVal.length <= 0){
-		alert("값을 입력하십시오!");
-		modalClose();
-		return false;
-	}
-	
-	const numRegex = /^-?[0-9]*\.?[0-9]+$/;
+function analogDataSave() {
+    var sendGroup = $("#sendGroup").val();
+    var sendTag = $("#sendTag").val();
+    var sendVal = $("#sendVal").val();
 
-	if (!numRegex.test(sendVal)) {
-	    alert("숫자만 입력하십시오!");
-	    return false;
-	}
+    if (sendVal.length <= 0) {
+        alert("값을 입력하십시오!");
+        modalClose();
+        return false;
+    }
 
+    const numRegex = /^-?[0-9]*\.?[0-9]+$/;
+    
+    if (!numRegex.test(sendVal)) {
+        alert("숫자만 입력하십시오!");
+        return false;
+    }
 
-	
-	$.ajax({
-	    url: "/donghwa/common/valueFloatSet",
-	    type: "post",
-	    dataType: "json",
-	    data: {
-	        "sendTagDir": sendGroup,
-	        "sendTagName": sendTag,
-	        "sendTagValue": sendVal
-	    },
-	    success: function(result) {
-	        console.log(result); 
-//	        modalClose();
-	    }
-	});
+    // sendVal이 소수점이 포함된 값이면 float, 아니면 analog (정수)
+    var isFloat = sendVal.includes(".");
+    var apiUrl = isFloat 
+        ? "/donghwa/common/valueFloatSet"  // 소수점이 있으면 float 처리
+        : "/donghwa/common/valueAnalogSet"; // 정수이면 analog 처리
+
+    // 숫자로 변환 (float 또는 short)
+    var convertedValue = isFloat ? parseFloat(sendVal) : parseInt(sendVal);
+
+    $.ajax({
+        url: apiUrl,
+        type: "post",
+        dataType: "json",
+        data: {
+            "sendTagDir": sendGroup,
+            "sendTagName": sendTag,
+            "sendTagValue": convertedValue
+        },
+        success: function(result) {
+            console.log(result); 
+//          modalClose();
+        }
+    });
 }
+
 
 $("*").on("click",function(e){
 /*

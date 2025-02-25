@@ -85,7 +85,7 @@ public class MainController {
     	
     	OpcDataMap opcDataMap = new OpcDataMap();
     	//확인
-    	System.out.println("sendTagDir : "+sendTagDir+"// sendTagName : "+sendTagName+"// sendTagValue : "+sendTagValue);
+    	System.out.println("아날로그 sendTagDir : "+sendTagDir+"// sendTagName : "+sendTagName+"// sendTagValue : "+sendTagValue);
     	opcDataMap.setOpcData(sendTagDir+"."+sendTagName, sendTagValue);
     	
     	return returnMap;    	
@@ -104,7 +104,7 @@ public class MainController {
 
         OpcDataMap opcDataMap = new OpcDataMap();
         // 값 확인
-        System.out.println("sendTagDir : " + sendTagDir + 
+        System.out.println("플롯 sendTagDir : " + sendTagDir + 
                            " // sendTagName : " + sendTagName + 
                            " // sendTagValue : " + sendTagValue);
         

@@ -9,7 +9,7 @@
   <%@ include file="../include/mainFooter.jsp" %>
   <jsp:include page="../include/pluginpage.jsp"/>
   <link rel="stylesheet" href="/donghwa/css/furnace/overview.css">
-  <%@ include file="../include/commonPopup.jsp" %>
+  <%@ include file="../include/commonPopupMain.jsp" %>
   <style>
     a, button, input, select, h1, h2, h3, h4, h5, * {
         box-sizing: border-box;
@@ -543,14 +543,24 @@ function overviewListView(){
 }
 
 function lamp(keys, value) {
-	console.log("lamp");
-//    if (keys === "lamp-8030") {
+
+
         if (value === true) {
             $("." + keys).css("background-color", "red"); 
         } else {
             $("." + keys).css("background-color", ""); 
         }
-//    }
+
+        if (keys === "lamp-8033") {
+            if (value === true) {
+                $("." + keys).css("background-color", "green");
+            } else if (value === false) {
+                $("." + keys).css("background-color", "");
+            }
+            $("."+keys).attr("onclick","digitalSet('DONGHWA.OVERVIEW','"+keys+"')");
+        	$("."+keys).css("cursor","pointer");
+        }
+
 }
 
 

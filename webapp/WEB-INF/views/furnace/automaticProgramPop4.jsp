@@ -142,12 +142,20 @@
 
 
     function value(keys, value){
-        console.log("keys: ", keys);  // keys 값을 출력
-        console.log("value: ", value);  // value 값을 출력
+    	if(!$("div").hasClass("anlog-popup-div-color")){
+    		$("."+keys).text(value);	
+    	}
+    	
+    	$("."+keys).css("display","");
+    	$("."+keys).css("text-align","center");
+    //	$("."+keys).css("font-weight","700");
+    	$("."+keys).css("font-size","16pt");
+    	$("."+keys).css("padding-top","5px");
+    	$("."+keys).attr("ondblclick","popupOpenAna('"+keys+"','DONGHWA.FURNACE.AUTOMATIC_PROGRAM.AUTOMATIC')");
+    	$("."+keys).css("cursor","pointer");
+    	$("."+keys).attr("align-items","center");
+    	$("."+keys).attr("margin-botoom","7px");
 
-        $("."+keys).text(value);
-        $("."+keys).css("text-align","center");
-        $("."+keys).css("font-size","20pt");
     }
 
     

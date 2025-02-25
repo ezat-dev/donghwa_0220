@@ -44,7 +44,8 @@
     </div>
     
     <div class="button-container">
-      <button class="ok_btn" id="ok_close_btn">OK</button>
+    <button class="ok_btn" id="ok_close_btn" onclick="valueDigitalSend();">OK</button>
+
       <button class="retry_btn"id="retry_btn">Retry</button>
     </div>
   </div>
@@ -103,6 +104,8 @@ function sendPlc(data, callback) {
     });
 }
 
+
+	
 function sendPlcString(dataString, callback) {
     $.ajax({
         url: "/donghwa/furnace/recipe/plcWriteString",
@@ -225,6 +228,38 @@ function startLoadingBarAndSendData() {
         console.error("세션 데이터가 정의되지 않았습니다.");
     }
 }
+
+function valueDigitalSend() {
+    var sendTagDir = "DONGHWA.PLC.M";  // 고정값
+    var sendTagName = "M8000";          // 고정값
+    var sendTagValue = true;            // 1을 true로 설정
+
+    console.log(sendTagDir);
+    console.log(sendTagName);
+    console.log(sendTagValue);
+
+    $.ajax({
+        url: "/donghwa/common/valueDigitalSet",
+        type: "post",
+        dataType: "json",
+        data: {
+            "sendTagDir": sendTagDir,
+            "sendTagName": sendTagName,
+            "sendTagValue": sendTagValue
+        },
+        success: function(result) {
+            console.log(result);
+       
+           
+        },
+        error: function(xhr, status, error) {
+            console.error("전송 실패", status, error);
+   
+           
+        }
+    });
+}
+
 </script>
 
 

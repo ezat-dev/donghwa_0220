@@ -160,7 +160,7 @@
     //로드
     $(function(){
     	overviewListView();
-    	overviewInterval = setInterval("overviewListView()", 500);
+    	overviewInterval = setInterval("overviewListView()", 1500);
     });
 
     
