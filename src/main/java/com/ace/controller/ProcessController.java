@@ -89,5 +89,18 @@ public class ProcessController {
     	
     	return returnMap;    	
     }	
+    
+    //TemperaturePOP
+    @RequestMapping(value= "/process/powerConsumptionPop/view", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> powerConsumptionPop() throws UaException, InterruptedException, ExecutionException {
+    	Map<String, Object> returnMap = new HashMap<String, Object>();
+
+    	OpcDataMap opcDataMap = new OpcDataMap();
+    	
+    	returnMap = opcDataMap.getOpcDataListMap("DONGHWA.PROCESS_VALUES.POWER_CONSUMPTION");
+    	
+    	return returnMap;    	
+    }	
 	
 }

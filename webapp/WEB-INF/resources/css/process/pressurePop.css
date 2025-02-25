@@ -86,7 +86,7 @@
 .temperature {
   color: #ffffff;
   text-align: left;
-  font-family: "Inter-Bold", sans-serif;
+  
   font-size: 30px;
   font-weight: 700;
   position: absolute;
@@ -94,7 +94,7 @@
   top: 3px;
   width: 269px;
   height: 36px;
-  -webkit-text-stroke: 1px #000000;
+  
 }
 .fur-pressure {
   background: #b0cafd;
@@ -107,7 +107,7 @@
 .auto {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -127,7 +127,7 @@
 .pis-6-x-13-5 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -155,7 +155,7 @@
 .psp-6 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -199,7 +199,7 @@
 .pis-13-5-1 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -235,7 +235,7 @@
 .pis-6-25 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -271,7 +271,7 @@
 .pis-6-27 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -323,7 +323,7 @@
 .high-vacuum2 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -335,7 +335,7 @@
 .fine-vacuum2 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -347,7 +347,7 @@
 .fore-vacuum2 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -367,7 +367,7 @@
 .pis-6-24 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
+  
   font-size: 20px;
   font-weight: 400;
   position: absolute;

@@ -142,9 +142,9 @@
       Furnace
       <ul class="submenu">
         <li onclick="menuClick('/donghwa/');">Overview</li>
-        <li onclick="popupClick('/donghwa/furnace/manualOperationPop', 311, 619, 730, 180);">Manual Operation</li> <!--가로 세로 오른쪽 시작 위쪽 시작 -->
+        <li onclick="popupClick('/donghwa/furnace/manualOperationPop', 311, 617, 730, 180);">Manual Operation</li> <!--가로 세로 오른쪽 시작 위쪽 시작 -->
 		<li onclick="popupClick('/donghwa/furnace/operationPressPop', 410.5, 482.5, 730, 210);">Operation Press</li><!--길면 180 짧으면 225이상 -->
-		<li onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 393, 730, 235);">Automatic program</li>
+		<li onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 508, 392, 730, 235);">Automatic program</li>
 
         <li onclick="menuClick('/donghwa/furnace/recipe');">Recipe</li>
       </ul>
@@ -154,10 +154,10 @@
       <ul class="submenu">
         <li onclick="popupClick('/donghwa/process/temperaturePop', 779, 498, 680, 165);">Temperature</li>
 		<li onclick="popupClick('/donghwa/process/pressurePop', 391, 441, 680, 180);">Pressure</li>
-		<li onclick="popupClick('/donghwa/process/pressureSwitchesPop', 391, 249, 680, 204);">Pressure switches</li>
-		<li onclick="popupClick('/donghwa/process/heaterPop', 507, 410, 680, 204);">Heater</li>
+		<li onclick="popupClick('/donghwa/process/pressureSwitchesPop', 400, 258, 680, 204);">Pressure switches</li>
+		<li onclick="popupClick('/donghwa/process/heaterPop', 518, 420, 680, 204);">Heater</li>
 		<li onclick="popupClick('/donghwa/process/pressPop', 940, 490, 550, 160);">Press</li>
-		<li onclick="popupClick('/donghwa/process/powerConsumptionPop', 902, 406, 550, 160);">Power Consumption</li>
+		<li onclick="popupClick('/donghwa/process/powerConsumptionPop', 910, 412, 550, 160);">Power Consumption</li>
 
       </ul>
     </li>
@@ -246,22 +246,26 @@
   }
 
   function popupClick(url, popupWidth, popupHeight, customLeft, customTop) {
-      var popup = window.open(
-          url,
-          "popupWindow" + popups.length,
-          "width=" + popupWidth + 
-          ",height=" + popupHeight + 
-          ",left=" + customLeft + 
-          ",top=" + customTop + 
-          ",menubar=no,toolbar=no,scrollbars=no,status=no,location=no,directories=no,resizable=no"
-      );
+	    var popup = window.open(
+	        url,
+	        "popupWindow" + popups.length,
+	        "width=" + popupWidth + 
+	        ",height=" + popupHeight + 
+	        ",left=" + customLeft + 
+	        ",top=" + customTop + 
+	        ",menubar=no,toolbar=no,scrollbars=no,status=no,location=no,directories=no,resizable=no"
+	    );
 
-      if (!popup || popup.closed || typeof popup.closed == "undefined") {
-          alert("팝업이 차단되었습니다. 팝업 차단 설정을 확인해주세요.");
-      } else {
-          popups.push(popup);
-      }
-  }
+	    if (!popup || popup.closed || typeof popup.closed == "undefined") {
+	        alert("팝업이 차단되었습니다. 팝업 차단 설정을 확인해주세요.");
+	    } else {
+	        popups.push(popup);
+
+	        // 팝업 창의 스타일로 overflow-x를 hidden으로 설정
+	        popup.document.body.style.overflowX = "hidden";  // 좌우 스크롤 제거
+	    }
+	}
+
 
   function closeAllPopups() {
       popups.forEach(popup => {

@@ -812,7 +812,20 @@ public class FurnaceController {
     	return returnMap;    	
     }
     
-  //Manual Operation
+  //automaticProgramPop4
+    @RequestMapping(value= "/furnace/automaticProgramPop4/view", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> automaticProgramPop4() throws UaException, InterruptedException, ExecutionException {
+    	Map<String, Object> returnMap = new HashMap<String, Object>();
+
+    	OpcDataMap opcDataMap = new OpcDataMap();
+    	
+    	returnMap = opcDataMap.getOpcDataListMap("DONGHWA.FURNACE.AUTOMATIC_PROGRAM.AUTOMATIC");
+    	
+    	return returnMap;    	
+    }	
+    
+    //automaticProgramPop3
     @RequestMapping(value= "/furnace/automaticProgramPop3/view", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> automaticProgramPop3() throws UaException, InterruptedException, ExecutionException {
@@ -824,6 +837,7 @@ public class FurnaceController {
     	
     	return returnMap;    	
     }	
+    
     
   //Manual Operation
     @RequestMapping(value= "/furnace/automaticProgramPop2/view", method = RequestMethod.POST)

@@ -13,4 +13,5 @@ encoding//webapp/WEB-INF/views/include/login.jsp=UTF-8
 encoding//webapp/WEB-INF/views/include/mainFooter.jsp=UTF-8
 encoding//webapp/WEB-INF/views/include/mainHeader.jsp=UTF-8
 encoding//webapp/WEB-INF/views/process/heaterPop.jsp=UTF-8
+encoding//webapp/WEB-INF/views/process/powerConsumptionPop.jsp=UTF-8
 encoding//webapp/WEB-INF/views/process/pressureSwitchesPop.jsp=UTF-8

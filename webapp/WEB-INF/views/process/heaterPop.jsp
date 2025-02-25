@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<jsp:include page="../include/pluginpage.jsp"/>
  <link rel="stylesheet" href="/donghwa/css/process/heaterPop.css">
   
   
@@ -132,8 +132,6 @@ function v(keys, value){
 		$("."+keys).css("color","black");
 	}
 
-	$("."+keys).attr("onclick","digitalSet('DONGHWA.PROCESS_VALUES.PRESSURE_SWITCHES','"+keys+"')");
-	$("."+keys).css("cursor","pointer");
 }
 /*
 function c(keys, value){

@@ -363,13 +363,13 @@
 .i-l-1 {
   color: #000000;
   text-align: left;
-  
+   width: 159px;
   font-size: 20px;
   font-weight: 400;
   position: absolute;
   left: 395px;
   top: 127px;
-  width: 31px;
+  width: 37px;
   height: 28px;
 }
 .cur-val-1 {

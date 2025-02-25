@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page session="true" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,7 @@
   <link rel="stylesheet" href="./vars.css">
 <link rel="stylesheet" href="/donghwa/css/furnace/automaticProgramPop2.css">
 <jsp:include page="../include/pluginpage.jsp"/>
-  
+
   <style>
    a,
    button,
@@ -99,13 +100,13 @@
     <div class="automatic-program">Automatic program</div>
     
     <div class="automatic"></div>
-    <div class="automatic-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 502, 393, 730, 235);">Automatic</div>
+    <div class="automatic-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop4', 508, 392, 730, 235);">Automatic</div>
     <div class="programmer"></div>
-    <div class="programmer-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop2', 502, 393, 730, 235);">Programmer</div>
+    <div class="programmer-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop2', 508, 392, 730, 235);">Programmer</div>
     <div class="start-conditions"></div>
-    <div class="startconditions-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop3', 502, 393, 730, 235);">Startconditions</div>
+    <div class="startconditions-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop3', 508, 392, 730, 235);">Startconditions</div>
     <div class="batch-data"></div>
-    <div class="batch-data-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 502, 393, 730, 235);">Batch data</div>
+    <div class="batch-data-text" onclick="popupClick('/donghwa/furnace/automaticProgramPop1', 508, 392, 730, 235);">Batch data</div>
     <div class="jump"></div>
     
     <div class="button-container">

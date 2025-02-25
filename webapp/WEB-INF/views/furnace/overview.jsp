@@ -336,8 +336,8 @@
       <div class="table-cell overTb4">0.00 mm</div>
     </div>
  	
-    <div class="table table3">
-      <div class="table-header" onclick="popupClick('/donghwa/process/pressurePop', 391, 441, 680, 180);">Furnace Pressure</div>
+    <div class="table table3"  onclick="popupClick('/donghwa/process/pressurePop', 391, 441, 680, 180);">
+      <div class="table-header">Furnace Pressure</div>
       <div class="Pressure_1">PIS 6.x / 13.5</div>
       <div class="table-cell D-7800"> mbar</div>
       <div class="Pressure_2">PSP 6</div>
