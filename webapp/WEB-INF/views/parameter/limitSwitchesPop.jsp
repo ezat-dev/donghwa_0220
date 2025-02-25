@@ -39,7 +39,7 @@
    .limitBox {
 	  background: #ffffff;
 	
-      width: 100px;
+      width: 110px;
 	  position: absolute;
 	  left: 508px;
 	  top: 118px;
@@ -65,20 +65,20 @@
 	  justify-content: space-between; 
 
 	}
-	.txF{
- 	position: absolute;
-    left: 48px;
-    top: 8.9px;
-    font-size: 25px;
-    z-index: 9999;
+	.txF {
+	    position: absolute;
+	    left: 54px;
+	    top: 6px;
+	    font-size: 25px;
+	    z-index: 9999;
 	}
 	
 	.txF2 {
- 	position: absolute;
-    left: 41px;
-    top: 8.9px;
-    font-size: 25px;
-    z-index: 9999;
+	    position: absolute;
+	    left: 41px;
+	    top: 6px;
+	    font-size: 25px;
+	    z-index: 9999;
 	}
 	.hysBox1, .txE2, .hysBox2 {
 	  margin: 0 16px;

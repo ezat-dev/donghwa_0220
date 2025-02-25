@@ -153,10 +153,10 @@
       Process values
       <ul class="submenu">
         <li onclick="popupClick('/donghwa/process/temperaturePop', 779, 498, 680, 165);">Temperature</li>
-		<li onclick="popupClick('/donghwa/process/pressurePop', 386, 430, 680, 180);">Pressure</li>
+		<li onclick="popupClick('/donghwa/process/pressurePop', 391, 441, 680, 180);">Pressure</li>
 		<li onclick="popupClick('/donghwa/process/pressureSwitchesPop', 391, 249, 680, 204);">Pressure switches</li>
 		<li onclick="popupClick('/donghwa/process/heaterPop', 507, 410, 680, 204);">Heater</li>
-		<li onclick="popupClick('/donghwa/process/pressPop', 936, 481, 550, 160);">Press</li>
+		<li onclick="popupClick('/donghwa/process/pressPop', 940, 490, 550, 160);">Press</li>
 		<li onclick="popupClick('/donghwa/process/powerConsumptionPop', 902, 406, 550, 160);">Power Consumption</li>
 
       </ul>
@@ -172,7 +172,7 @@
     <li>
       Parameter
       <ul class="submenu">
-        <li onclick="popupClick('/donghwa/parameter/limitSwitchesPop', 756, 282, 550, 200);">Limit switches</li>
+        <li onclick="popupClick('/donghwa/parameter/limitSwitchesPop', 749, 282, 550, 200);">Limit switches</li>
         <li onclick="popupClick('/donghwa/parameter/fastcoolingPop', 539, 340, 600, 180);">Fastcooling</li>
         <li onclick="popupClick('/donghwa/parameter/timerPop', 734, 367, 600, 180);">Timer</li>
         <li onclick="popupClick('/', 505, 505, 584, 180);">Calibrate TC measuring syst</li>

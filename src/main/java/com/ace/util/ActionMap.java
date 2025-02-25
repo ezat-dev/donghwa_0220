@@ -46,7 +46,7 @@ public class ActionMap {
 		}else{
 			if(tagName.contains("-img2")){
 				result = "-img2";
-			}else if(tagName.contains("-img")) {
+			}else if(tagName.contains("img")) {
 				result = "img";	
 			}else if(tagName.contains("asd-")) {
 				result = "asd";
@@ -56,6 +56,7 @@ public class ActionMap {
 				result = "M";
 			}else if(tagName.contains("lamp-")) {
 				result = "lamp";
+				
 			}else {
 				result = "v";
 			}

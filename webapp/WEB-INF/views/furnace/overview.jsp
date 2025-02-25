@@ -40,7 +40,7 @@
         top: 190px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         gap: 27px;
         width: 35%;
         left: 511px; 
@@ -174,23 +174,140 @@
         background-color: #7aaedc; 
     }
     
+	.heater1 {
+	    position: absolute;
+	    left: 833px;
+	    top: 672px;
+	    transform: translateY(-50%);
+	    height: 8px;
+	    background-color: #868296;
+	    width: 74px;
+	    z-index: 9999;
+	}
 	
+	.heater2 {
+	    position: absolute;
+	    left: 935px;
+	    top: 672px;
+	    transform: translateY(-50%);
+	    height: 8px;
+	    background-color: #868296;
+	    width: 77px;
+	    z-index: 9999;
+	}
 	
-
-
-
-	.g-box2 {
+		.heater3 {
+	    position: absolute;
+	    left: 834px;
+	    top: 822px;
+	    transform: translateY(-50%);
+	    height: 8px;
+	    background-color: #868296;
+	    width: 74px;
+	    z-index: 9999;
+	}
+	
+		.heater4 {
+	    position: absolute;
+	    left: 936px;
+	    top: 822px;
+	    transform: translateY(-50%);
+	    height: 8px;
+	    background-color: #868296;
+	    width: 77px;
+	    z-index: 9999;
+	}
+		.g-box3 {
 	    width: 80px;
-	    height: 78px;
-	    background-color:#E2E2E2;
-	    left: 1430px;
-	    top: 595px;
+	    height: 90px;
+	    background-color: #E2E2E2;
+	    left: 1080px;
+	    top: 892px;
 	    position: absolute;
 	    z-index: 9999;
 	}
+
+	
+		.g-box2 {
+	    width: 80px;
+	    height: 78px;
+	    background-color: #E2E2E2;
+	    left: 1030px;
+	    top: 852px;
+	    position: absolute;
+	    z-index: 9999;
+    
+    }
 	.tx{
 	font-size: 18px; 
 	}
+	
+	.table1:hover {
+	    background-color: #f9e5eb;
+	    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+	    transform: scale(1.04);
+	    border: 2px solid #f29b9b;
+	    transition: all 0.2s ease;
+	    cursor: pointer;
+	}
+	
+	.table2:hover {
+	    background-color: #e5f7e0;
+	    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+	    transform: scale(1.04);
+	    border: 2px solid #74e174;
+	    transition: all 0.2s ease;
+	    cursor: pointer;
+	}
+	
+	.table3:hover {
+	    background-color: #e0f1fb;
+	    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+	    transform: scale(1.04);
+	    border: 2px solid #89c2fb;
+	    transition: all 0.2s ease;
+	    cursor: pointer;
+	}
+	
+	.table4:hover {
+	    background-color: #e5f7e0;
+	    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+	    transform: scale(1.04);
+	    border: 2px solid #74e174;
+	    transition: all 0.2s ease;
+	    cursor: pointer;
+	}
+	
+	.ball-red-1-img {
+	    position: absolute;
+	    top: 683px;
+	    left: 1511px;
+	    width: 74px;
+	    height: 74px;
+	    background-color: red;
+	    border-radius: 50%;
+	}
+	
+	.ball-red-2-img {
+	  position: absolute;
+	   top: 888px;
+	    left: 1511px;
+	    width: 74px;
+	    height: 74px;
+	    background-color: red;
+	    border-radius: 50%;
+	}
+	
+	.ball-red-3-img {
+	    position: absolute;
+	    top: 973px;
+	    left: 1511px;
+	    width: 74px;
+	    height: 74px;
+	    background-color: red;
+	    border-radius: 50%;
+	}
+		
 
   </style>
 
@@ -200,15 +317,18 @@
 
  
   <div class="table-container">
-    <div class="table table1">
-      <div class="table-header">Furance temperature     Auto</div>
-      <div class="temper_1">TIC 4.x</div>
-      <div class="table-cell overTb1">79°C</div>
-      <div class="temper_2">TSP 4</div>
-      <div class="table-cell overTb2">20°C</div>
-    </div>
+  
+  
+	 <div class="table table1" onclick="popupClick('/donghwa/process/temperaturePop', 779, 498, 450, 165);">
+	  <div class="table-header">Furance temperature     Auto</div>
+	  <div class="temper_1">TIC 4.x</div>
+	  <div class="table-cell overTb1">79°C</div>
+	  <div class="temper_2">TSP 4</div>
+	  <div class="table-cell overTb2">20°C</div>
+	</div>
 
-    <div class="table table2">
+
+    <div class="table table2" onclick="popupClick('/donghwa/process/pressPop', 940, 490, 450, 160);">
       <div class="table-header">Position</div>
       <div class="Position_1">GIC 22.260.10</div>
       <div class="table-cell overTb3">1.16 mm</div>
@@ -217,14 +337,14 @@
     </div>
  	
     <div class="table table3">
-      <div class="table-header">Furnace Pressure</div>
+      <div class="table-header" onclick="popupClick('/donghwa/process/pressurePop', 391, 441, 680, 180);">Furnace Pressure</div>
       <div class="Pressure_1">PIS 6.x / 13.5</div>
       <div class="table-cell D-7800"> mbar</div>
       <div class="Pressure_2">PSP 6</div>
       <div class="table-cell D-7810"> mabar</div>	
     </div>
 
-    <div class="table table4">
+    <div class="table table4" onclick="popupClick('/donghwa/process/pressPop', 940, 490, 450, 160);">
       <div class="table-header">Press capacity</div>
       <div class="capacity_1">WIC 22.4.2 X</div>
       <div class="table-cell overTb7">-5 kN</div>
@@ -243,14 +363,14 @@
 
    <div class="table-container2">
     
-     <div class="table2 table7">
+     <div class="table2 table7" onclick="popupClick('/donghwa/process/pressurePop', 391, 441, 680, 180);">
       <div class="table-header">High-vacuum</div>
       
       <div class="capacity_3 D-7800">-- kN</div>
     </div>
     
     
-    <div class="table2 table8">
+    <div class="table2 table8" onclick="popupClick('/donghwa/process/pressurePop', 391, 441, 680, 180);">
       <div class="table-header">Fore-vacuum</div>
      
       <div class="capacity_3 D-7810">--</div>
@@ -259,7 +379,15 @@
 
    <div class="g-box"></div>
    <div class="g-box2"></div>
+   <div class="g-box3"></div>
+   
+   
+   <div class="heater1 heaterView"></div>
+   <div class="heater2 heaterView"></div>
+   <div class="heater3 heaterView"></div>
+   <div class="heater4 heaterView"></div>
 
+   
  
     <div class="base-1"></div>
     <div class="press-rec-1"></div>
@@ -339,6 +467,10 @@
     <div class="ball-on-2 ball-on-2-img"></div>
     <div class="ball-off-3"></div>
     <div class="ball-on-3 ball-on-3-img"></div>
+    
+    <div class="ball-red-1-img"></div>
+    <div class="ball-red-2-img"></div>
+    <div class="ball-red-3-img"></div>
     <!-- <div class="ball-line-1"></div>
     <div class="ball-line-2"></div>
     <div class="ball-line-3"></div>
@@ -398,7 +530,6 @@ function overviewListView(){
 						Lclose(keys, d[keys].value);
 					}else if(d[keys].action == "img"){
 						img(keys, d[keys].value);	
-
 					}else if(d[keys].action == "lamp"){
 						lamp(keys, d[keys].value);
 					}else if(d[keys].action == "value"){
@@ -412,27 +543,28 @@ function overviewListView(){
 }
 
 function lamp(keys, value) {
-    if (keys === "lamp-8030") {
+	console.log("lamp");
+//    if (keys === "lamp-8030") {
         if (value === true) {
             $("." + keys).css("background-color", "red"); 
         } else {
             $("." + keys).css("background-color", ""); 
         }
-    }
+//    }
 }
 
 
-function img(keys, value) {
-    if (value === true) {
-        $("." + keys).fadeIn(200); 
-    } else {
-        $("." + keys).fadeOut(200); 
-    }
-}
+	function img(keys, value) {
+	    if (value === true) {
+	        $("." + keys).fadeIn(200); 
+	    } else {
+	        $("." + keys).fadeOut(200); 
+	    }
+	}
 
 
 function v(keys, value){
-    console.log("keys:", keys, "value:", value);  
+
     
     if(value === true){
         $("."+keys).css("color", "black");
@@ -503,6 +635,13 @@ function v(keys, value){
             $("." + keys).css("visibility", "hidden");
         }
     }
+    if (keys === "heaterView") {
+        if (value === 1) {
+            $("." + keys).css("color", "red");  
+        } else {
+            $("." + keys).css("color", ""); 
+        }
+    }
 }
 
 
@@ -547,6 +686,24 @@ function value2(keys, value){
 	$("."+keys).css("font-size","18pt");
 	$("." + keys).css("background-color", "white"); 
 	
+}
+
+function popupClick(url, popupWidth, popupHeight, customLeft, customTop) {
+    var popup = window.open(
+        url,
+        "popupWindow" + popups.length,
+        "width=" + popupWidth + 
+        ",height=" + popupHeight + 
+        ",left=" + customLeft + 
+        ",top=" + customTop + 
+        ",menubar=no,toolbar=no,scrollbars=no,status=no,location=no,directories=no,resizable=no"
+    );
+
+    if (!popup || popup.closed || typeof popup.closed == "undefined") {
+        alert("팝업이 차단되었습니다. 팝업 차단 설정을 확인해주세요.");
+    } else {
+        popups.push(popup);
+    }
 }
 
 </script>  

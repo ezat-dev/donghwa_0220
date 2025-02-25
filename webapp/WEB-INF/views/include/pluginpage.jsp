@@ -169,12 +169,13 @@ function analogDataSave(){
 		return false;
 	}
 	
-	const numRegex = /^[0-9]*\.?[0-9]+$/;
+	const numRegex = /^-?[0-9]*\.?[0-9]+$/;
 
-	if(!numRegex.test(sendVal)){
+	if (!numRegex.test(sendVal)) {
 	    alert("숫자만 입력하십시오!");
 	    return false;
 	}
+
 
 	
 	$.ajax({

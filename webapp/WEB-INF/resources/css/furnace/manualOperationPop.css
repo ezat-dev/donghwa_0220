@@ -167,6 +167,15 @@
   left: 352px;
   top: 99px;
 }
+
+.plc-high-vacuum-pump {
+  background: #e3e3e3;
+  width: 7px;
+  height: 28px;
+  position: absolute;
+  left: 352px;
+  top: 99px;
+}
 .pumping-station {
   color: #000000;
   text-align: left;

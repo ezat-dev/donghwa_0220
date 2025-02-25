@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer UI</title>
-        <jsp:include page="../include/pluginpage.jsp"/>
+
+       <jsp:include page="../include/pluginpage.jsp"/>
    
     <style>
         body {
@@ -252,140 +252,6 @@
 
 
 
-
-    var overviewInterval;
-
-  //로드
-  $(function(){
-  	overviewListView();
-  	overviewInterval = setInterval("overviewListView()", 1000);
-  });
-
-
-  //OPC값 알람 조회
-  function overviewListView() {
-      $.ajax({
-          url: "/donghwa/furnace/overview/view",
-          type: "post",
-          dataType: "json",
-          success: function (result) {
-              var data = result.multiValues;
-
-              for (let key in data) {
-
-                  for (let keys in data[key]) {
-                      var d = data[key];
-
-                      if (d[keys].action == "v") {
-                          v(keys, d[keys].value);
-                      } else if (d[keys].action == "c") {
-                          c(keys, d[keys].value);
-                      } else if (d[keys].action == "b") {
-                          b(keys, d[keys].value);
-                      } else if (d[keys].action == "value") {
-                          value(keys, d[keys].value);
-                      } else if (d[keys].action == "asd") {
-                          asd(keys, d[keys].value);
-                      } else if (d[keys].action == "plc") {
-                          plc(keys, d[keys].value);
-                      }
-                  }
-              }
-          }
-      });
-  }
-
-
-  function v(keys, value){
-  	
-  	if(value == true){
-  		$("."+keys).css("background-color","#A9A9A9");
-
-  	}else{
-  		$("."+keys).css("background-color","yelow");
-
-  	}
-
-  	$("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+keys+"')");
-  	$("."+keys).css("cursor","pointer");
-  }
-
-
-  function M(keys, value){
-  	
-  	if(value == true){
-  		$("."+keys).css("background-color","#A9A9A9");
-
-  	}else{
-  		$("."+keys).css("background-color","#5A6D8A");
-
-  	}
-
-  	$("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+keys+"')");
-  	$("."+keys).css("cursor","pointer");
-  }
-
-  function lamp(keys, value){
-	  	
-	  	if(value == true){
-	  		$("."+keys).css("background-color","yelow");
-
-	  	}else{
-	  		$("."+keys).css("background-color","red");
-
-	  	}
-
-	  	$("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+keys+"')");
-	  	$("."+keys).css("cursor","pointer");
-	  }
-
-
-
-  function value(keys, value){
-  	$("."+keys).text(value);
-  	$("."+keys).css("text-align","center");
-  	$("."+keys).css("font-size","12pt");
-
-  }
-
-  function asd(keys, value) {
-      if (value == true) {
-
-  		var valuesArray = keys.split("-");
-  		var rtnValue = "";
-  		var i=0;
-  		for(i<0;i<valuesArray.length; i++){
-  			if(i!=0){
-  				if(valuesArray.length > 2 && i < valuesArray.length-1){
-  					rtnValue += valuesArray[i]+"-";
-  				}else{
-  					rtnValue += valuesArray[i];
-  				}
-  			}
-  		}
-//  		rtnValue = rtnValue.substring(0,rtnValue.length-1);
-
-  		console.log(rtnValue);
-          
-          $("." + keys).removeAttr("disabled",false); 
-          $("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+rtnValue+"')");
-          $("." + keys).css("cursor", "pointer");
-      } else {
-          $("." + keys).css("color", "#D3D3D3"); 
-          $("." + keys).attr("disabled", true);
-          $("." + keys).removeAttr("onclick");
-          $("." + keys).css("cursor", "");
-      }
-  }
-
-
-  function plc(keys, value) {
-      if (value == true) {
-          $("." + keys).css("background-color", "green"); 
-      } else {
-          $("." + keys).css("background-color", ""); 
-      }
-  }
 </script>
 
 

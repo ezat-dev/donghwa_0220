@@ -147,6 +147,7 @@ function overviewListView() {
 
 
 function v(keys, value){
+/*
 	console.log("v() 호출: keys =", keys, ", value =", value);
 	if(value == true){
 		$("."+keys).css("background-color","#A9A9A9");
@@ -158,6 +159,7 @@ function v(keys, value){
 
 	$("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+keys+"')");
 	$("."+keys).css("cursor","pointer");
+*/
 }
 
 
@@ -193,12 +195,13 @@ function asd(keys, value) {
 //		rtnValue = rtnValue.substring(0,rtnValue.length-1);
 
 		console.log(rtnValue);
-        
-        $("." + keys).removeAttr("disabled",false); 
+
+		$("." + keys).css("color", "#000000");
+        $("." + keys).removeAttr("disabled"); 
         $("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+rtnValue+"')");
         $("." + keys).css("cursor", "pointer");
     } else {
-        $("." + keys).css("color", "#D3D3D3"); 
+        $("." + keys).css("color", "#D3D3D3");
         $("." + keys).attr("disabled", true);
         $("." + keys).removeAttr("onclick");
         $("." + keys).css("cursor", "");
