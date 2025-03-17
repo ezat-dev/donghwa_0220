@@ -98,15 +98,17 @@ public class MainController {
     public Map<String, Object> valueFloatSet(
             @RequestParam String sendTagDir,
             @RequestParam String sendTagName,
-            @RequestParam float sendTagValue 
+            @RequestParam String sendTagValue 
     ) throws UaException, InterruptedException, ExecutionException {
         Map<String, Object> returnMap = new HashMap<>();
 
         OpcDataMap opcDataMap = new OpcDataMap();
         // 값 확인
+/*
         System.out.println("플롯 sendTagDir : " + sendTagDir + 
                            " // sendTagName : " + sendTagName + 
                            " // sendTagValue : " + sendTagValue);
+*/
         
         opcDataMap.setOpcData(sendTagDir + "." + sendTagName, sendTagValue);
 

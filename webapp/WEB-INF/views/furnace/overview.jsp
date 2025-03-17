@@ -382,10 +382,10 @@
    <div class="g-box3"></div>
    
    
-   <div class="heater1 heaterView"></div>
-   <div class="heater2 heaterView"></div>
-   <div class="heater3 heaterView"></div>
-   <div class="heater4 heaterView"></div>
+   <div class="heater1 heaterView lamp-8030"></div>
+   <div class="heater2 heaterView lamp-8030"></div>
+   <div class="heater3 heaterView lamp-8030"></div>
+   <div class="heater4 heaterView lamp-8030"></div>
 
    
  
@@ -401,11 +401,11 @@
     <div class="obj-line-3"></div>
     <div class="obj-line-4"></div>
     <div class="component-1">
-      <div class="pillar-rec-1 lamp-8030"></div>
+      <div class="pillar-rec-1"></div>
       <img class="pillar-1" src="/donghwa/css/furnace/img/pillar-10.png" />
     </div>
     <div class="component-2">
-      <div class="pillar-rec-2 lamp-8030"></div>
+      <div class="pillar-rec-2"></div>
       <img class="pillar-2" src="/donghwa/css/furnace/img/pillar-20.png" />
     </div>
     <img class="component-3 Ldclose" src="/donghwa/css/furnace/img/component-30.svg" />
@@ -492,7 +492,8 @@
     <img class="arrow-3" src="/donghwa/css/furnace/img/arrow-30.svg" />
     <div class="box-off-1"></div>
     <div class="box-on-1"></div>
-  
+   <div class="GreenPen GreenY140"></div>
+   <div class="RedPen  RedX0CC"></div>
     <img class="arrow-1" src="/donghwa/css/furnace/img/arrow-10.svg" />
 
   <script>
@@ -519,6 +520,7 @@ function overviewListView(){
         		var d = data[key];
 
 	        		 if (d[keys].action == "v") {
+	        			 console.log("V 값 확인:", keys, d[keys].value);
 	                     v(keys, d[keys].value);
 					}else if(d[keys].action == "Ropen"){
 						Ropen(keys, d[keys].value);
@@ -530,6 +532,8 @@ function overviewListView(){
 						Lclose(keys, d[keys].value);
 					}else if(d[keys].action == "img"){
 						img(keys, d[keys].value);	
+					}else if(d[keys].action == "rover"){
+						rover(keys, d[keys].value);	
 					}else if(d[keys].action == "lamp"){
 						lamp(keys, d[keys].value);
 					}else if(d[keys].action == "value"){
@@ -564,6 +568,8 @@ function lamp(keys, value) {
 }
 
 
+
+
 	function img(keys, value) {
 	    if (value === true) {
 	        $("." + keys).fadeIn(200); 
@@ -571,7 +577,7 @@ function lamp(keys, value) {
 	        $("." + keys).fadeOut(200); 
 	    }
 	}
-
+	
 
 function v(keys, value){
 
@@ -651,7 +657,29 @@ function v(keys, value){
         } else {
             $("." + keys).css("color", ""); 
         }
+        
     }
+
+    const colorMapping = {
+    	    "RedX0CC": "red",
+    	    "GreenY140": "green"
+    	};
+
+    	if (keys in colorMapping) {
+    	    if (value === true) {
+    	        $("." + keys).css({
+    	            "background-color": colorMapping[keys],
+    	            "display": "block",
+    	            "z-index": "9999" 
+    	        });
+    	    } else {
+    	        $("." + keys).css({
+    	            "background-color": "",
+    	            "z-index": ""
+    	        });
+    	    }
+    	}
+
 }
 
 
@@ -684,19 +712,11 @@ function value(keys, value){
     }
     $("."+keys).css("text-align", "center");
     $("."+keys).css("font-size", "14pt");
-    $("." + keys).css("background-color", "white"); 
+
 }
 
 
-function value2(keys, value){
-	var truncatedValue = Math.floor(value * 10) / 10;
 
-	$("."+keys).text(value);
-	$("."+keys).css("text-align","center");
-	$("."+keys).css("font-size","18pt");
-	$("." + keys).css("background-color", "white"); 
-	
-}
 
 function popupClick(url, popupWidth, popupHeight, customLeft, customTop) {
     var popup = window.open(

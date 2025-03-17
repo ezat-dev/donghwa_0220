@@ -114,12 +114,13 @@ function popupOpenAna(keys, value){
 	$("#sendGroup").val(value);
 	$("#sendTag").val(keys);
 	
+	
 //	modalOpen();
 }
 
 
 $("*").on("keydown",function(e){
-	console.log(e);
+//	console.log(e);
 	
 	//엔터키가 눌렸을 때
 	if(e.keyCode == 13){
@@ -175,16 +176,33 @@ function analogDataSave() {
         alert("숫자만 입력하십시오!");
         return false;
     }
+    var convertedValue = 0;
+    var apiUrl;
+    
 
     // sendVal이 소수점이 포함된 값이면 float, 아니면 analog (정수)
     var isFloat = sendVal.includes(".");
-    var apiUrl = isFloat 
+    apiUrl = isFloat 
         ? "/donghwa/common/valueFloatSet"  // 소수점이 있으면 float 처리
         : "/donghwa/common/valueAnalogSet"; // 정수이면 analog 처리
 
-    // 숫자로 변환 (float 또는 short)
-    var convertedValue = isFloat ? parseFloat(sendVal) : parseInt(sendVal);
 
+	console.log(typeof sendVal);
+    // 숫자로 변환 (float 또는 short)
+    var convertedValue = isFloat ? sendVal : parseInt(sendVal);
+
+//    console.log(typeof convertedValue);
+ //   console.log(typeof parseFloat(convertedValue));
+
+//	apiUrl = "/donghwa/common/valueFloatSet";
+//	convertedValue = sendVal;
+
+//	console.log(sendVal);
+//	console.log(convertedValue);
+
+//	console.log(typeof sendVal);
+//	console.log(typeof convertedValue);
+	
     $.ajax({
         url: apiUrl,
         type: "post",

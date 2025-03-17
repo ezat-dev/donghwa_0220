@@ -44,8 +44,8 @@ public class ActionMap {
 			//t-tong 또는 b-tong
 			result = "value";			
 		}else{
-			if(tagName.contains("-img2")){
-				result = "-img2";
+			if(tagName.contains("off-")){
+				result = "off";
 			}else if(tagName.contains("img")) {
 				result = "img";	
 			}else if(tagName.contains("asd-")) {

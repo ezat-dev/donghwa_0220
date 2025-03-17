@@ -11,10 +11,76 @@
    <jsp:include page="../include/pluginpage.jsp"/>
    <jsp:include page="../include/commonPopup.jsp"/>
   <style>
-    /* 필요한 스타일을 여기에 추가 */
+  
+	.offbt {
+	    width: 28px;
+	    height: 27px;
+	    background-color: red;
+	    display: inline-block;
+	    margin: 5px;
+	    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	    transition: all 0.3s ease-in-out;
+	    cursor: pointer; 
+	}
+	
+	/* 호버 효과 */
+	.offbt:hover {
+	    background-color: darkred; 
+	    transform: scale(1.1); 
+	    box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+	}
+	
+	.off-pumping{
+		position: absolute;
+	    left: 365px;
+	    top: 94px;
+	}
+
+	.off-high-vavuum{
+		position: absolute;
+	    left: 365px;
+	    top: 138px;
+	}
+	
+
+	
+	.off-evacuate-fine{
+		position: absolute;
+	    left: 365px;
+	    top: 181px;
+	}		
+	
+	.off-evacuate-high{
+		position: absolute;
+	    left: 365px;
+	    top: 224px;
+	}
+	
+	
+	.off-fastcooling{
+		position: absolute;
+	    left: 365px;
+	    top: 569px;
+	}
+	
+	
+	.off-manual-leaktest{
+						
+		position: absolute;
+	    left: 365px;
+	    top: 612px;
+	}	
+	
+	
+	
+	   
   </style>
 </head>
 <body>
+	
+	
+	
+
   <div class="manual-operation-box"></div>
   <div class="manual-operation-header"></div>
   <div class="manual-operation-main"></div>
@@ -74,7 +140,8 @@
   
   <div class="venting-n-2 asd-venting-n-2"></div>
   <div class="plc-venting-n-2 asd-venting-n-2"></div>
-  <div class="venting-n-22">Venting N2</div>
+  <div class="venting-n-22" style="color: #d3d3d3;">Venting N2</div>
+
   
   
   <div class="venting-ar asd-venting-ar"></div>
@@ -101,6 +168,19 @@
   <div class="plc-close-lid asd-close-lid"></div>
   <div class="close-lid-clamps asd-close-lid">Close Lid Clamps</div>
 
+
+	<div class="off-pumping offbt"></div>
+	
+	<div class="off-high-vavuum offbt"></div>
+	
+	<div class="off-evacuate-fine offbt"></div>
+	
+	<div class="off-evacuate-high offbt"></div>
+
+	<div class="off-manual-leaktest offbt"></div>
+	
+	<div class="off-fastcooling offbt"></div>
+		
 <script>
 
 var overviewInterval;
@@ -130,8 +210,9 @@ function overviewListView() {
                         v(keys, d[keys].value);
                     } else if (d[keys].action == "c") {
                         c(keys, d[keys].value);
-                    } else if (d[keys].action == "b") {
-                        b(keys, d[keys].value);
+                    } else if (d[keys].action == "off") {
+                    	console.log("OFF 값 확인:", keys, d[keys].value);
+                    	off(keys, d[keys].value);
                     } else if (d[keys].action == "value") {
                         value(keys, d[keys].value);
                     } else if (d[keys].action == "asd") {
@@ -146,35 +227,43 @@ function overviewListView() {
 }
 
 
-function v(keys, value){
-/*
-	console.log("v() 호출: keys =", keys, ", value =", value);
-	if(value == true){
-		$("."+keys).css("background-color","#A9A9A9");
-
-	}else{
-		$("."+keys).css("background-color","yelow");
-
-	}
-
-	$("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+keys+"')");
-	$("."+keys).css("cursor","pointer");
-*/
+function v(keys, value) {
+    if (keys === "auto") {
+        $("." + keys).attr("onclick", "digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION', '"+keys+"')")
+                     .css("cursor", "pointer");  
+    }
+    if (keys === "manual") {
+        $("." + keys).attr("onclick", "digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION', '"+keys+"')")
+                     .css("cursor", "pointer");  
+    }
 }
 
 
 
 
+
 function value(keys, value){
-	console.log("value() 호출: keys =", keys, ", value =", value);
+	
 	$("."+keys).text(value);
 	$("."+keys).css("text-align","center");
 	$("."+keys).css("font-size","12pt");
 
 }
 
+
+
+function off(keys, value){
+	 if (value == true) {
+	        $("." + keys).css("background-color", "green"); 
+	    } else {
+	        $("." + keys).css("background-color", ""); 
+	    }
+	 $("."+keys).attr("onclick","digitalSet('DONGHWA.FURNACE.MANUAL_OPERATION','"+keys+"')");	
+}
+
+
 function asd(keys, value) {
-	console.log("asd() 호출: keys =", keys, ", value =", value);
+	/*	console.log("asd() 호출: keys =", keys, ", value =", value);*/
 
 
 	
@@ -194,7 +283,7 @@ function asd(keys, value) {
 		}
 //		rtnValue = rtnValue.substring(0,rtnValue.length-1);
 
-		console.log(rtnValue);
+//		console.log(rtnValue);
 
 		$("." + keys).css("color", "#000000");
         $("." + keys).removeAttr("disabled"); 
@@ -211,7 +300,7 @@ function asd(keys, value) {
 
 function plc(keys, value) {
     if(keys.indexOf("plc-evacuate-high") != -1){
-		console.log("plc() 호출: keys =", keys, ", value =", value);
+	//	console.log("plc() 호출: keys =", keys, ", value =", value);
     }
     if (value == true) {
         $("." + keys).css("background-color", "green"); 

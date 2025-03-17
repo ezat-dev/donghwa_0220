@@ -959,6 +959,34 @@
   top: 547px;
   overflow: visible;
 }
+
+.GreenPen {
+   background: #d9d9d9;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.5px;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 1220px;
+    top: 688px;
+    z-index: 123;
+}
+
+.RedPen {
+   background: #d9d9d9;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.5px;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 1220px;
+    top: 688px;
+    z-index: 124;
+}
 .box-off-1 {
   background: #c8c8c8;
   border-style: solid;

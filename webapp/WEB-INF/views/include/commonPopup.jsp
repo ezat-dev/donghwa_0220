@@ -170,10 +170,12 @@
 <!-- 팝업 오버레이 -->
 <div id="popupOverlay" onclick="closePopup()"></div>
 
+
+
 <!-- 팝업 내용 -->
 <div id="commonPopup">
     <button class="close-btn" onclick="closePopup()">✖</button>
-    <h2>Manual Operation</h3>
+    <h3>Manual Operation</h3>
     <button class="bt_on" type="button">ON</button>
     <button class="bt_off" type="button">OFF</button>
     
